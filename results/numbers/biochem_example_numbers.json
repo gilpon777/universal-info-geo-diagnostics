@@ -1,0 +1,69 @@
+{
+ "model": "A->B->C->D first-order chain, theta=(k1,k2,k3,A0)",
+ "theta": [
+  0.9,
+  0.35,
+  0.12,
+  1.0
+ ],
+ "r_eff_raw": 1.9264460583390082,
+ "r_eff_scaled": 3.210338793811354,
+ "log10CN_scaled": 1.1234118506450284,
+ "scaled_direction_snr": [
+  1.32,
+  1.13,
+  0.92,
+  0.36
+ ],
+ "param_corr_k1_k2": 0.337667911710992,
+ "greedy_picks": [
+  {
+   "point": "C@18",
+   "driver": "noise",
+   "gain_margin": 1.02,
+   "diag_score_margin": 1.44
+  },
+  {
+   "point": "B@6",
+   "driver": "noise",
+   "gain_margin": 1.01,
+   "diag_score_margin": 1.26
+  },
+  {
+   "point": "C@3",
+   "driver": "noise",
+   "gain_margin": 1.0,
+   "diag_score_margin": 0.79
+  },
+  {
+   "point": "B@0.5",
+   "driver": "noise",
+   "gain_margin": 1.01,
+   "diag_score_margin": 0.74
+  },
+  {
+   "point": "C@6",
+   "driver": "gradient",
+   "gain_margin": 1.04,
+   "diag_score_margin": 1.8
+  },
+  {
+   "point": "B@4",
+   "driver": "gradient",
+   "gain_margin": 1.08,
+   "diag_score_margin": 3.62
+  },
+  {
+   "point": "B@1",
+   "driver": "gradient",
+   "gain_margin": 1.22,
+   "diag_score_margin": 2.28
+  },
+  {
+   "point": "C@12",
+   "driver": "gradient",
+   "gain_margin": 1.01,
+   "diag_score_margin": 1.32
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "void": {
+  "scaled_direction_snr": [
+   1.29,
+   1.15,
+   0.85,
+   0.53
+  ],
+  "greedy_first3": [
+   {
+    "index": 0,
+    "xc_Rv": 0.07142857142857142,
+    "driver": "noise",
+    "diag_score_margin": 14.2,
+    "gain_margin": 1.12
+   },
+   {
+    "index": 5,
+    "xc_Rv": 0.7857142857142856,
+    "driver": "noise",
+    "diag_score_margin": 1.0,
+    "gain_margin": 1.0
+   },
+   {
+    "index": 9,
+    "xc_Rv": 1.357142857142857,
+    "driver": "noise",
+    "diag_score_margin": 0.6,
+    "gain_margin": 1.01
+   }
+  ]
+ },
+ "gw_sigma_b": {
+  "r_eff_raw": 1.004476090330606,
+  "stiffest_direction_snr": 0.0192060752072351,
+  "info_multiplier_stiffest": 2710.9577532160874,
+  "equivalent_crossings_for_snr1": 16265.746519296525
+ }
+}

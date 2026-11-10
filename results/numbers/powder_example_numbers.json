@@ -1,0 +1,87 @@
+{
+ "components": [
+  "SiO2",
+  "Al2O3",
+  "Fe2O3",
+  "TiO2"
+ ],
+ "true_fractions": [
+  0.5,
+  0.25,
+  0.15,
+  0.1
+ ],
+ "r_eff_raw": 2.070618608904808,
+ "r_eff_scaled": 2.137620488473238,
+ "log10CN_scaled": 0.8345503962934384,
+ "scaled_direction_snr": [
+  1.48,
+  0.69,
+  0.57
+ ],
+ "cramer_rao_sigma_fractions": [
+  0.0051,
+  0.009,
+  0.0056,
+  0.0063
+ ],
+ "param_corr_matrix_free": [
+  [
+   1.0,
+   0.58,
+   0.54
+  ],
+  [
+   0.58,
+   1.0,
+   0.67
+  ],
+  [
+   0.54,
+   0.67,
+   1.0
+  ]
+ ],
+ "greedy_channels_nm": [
+  {
+   "lambda_nm": 341.02564102564105,
+   "driver": "gradient",
+   "gain_margin": 1.01
+  },
+  {
+   "lambda_nm": 658.974358974359,
+   "driver": "gradient",
+   "gain_margin": 1.0
+  },
+  {
+   "lambda_nm": 382.05128205128204,
+   "driver": "gradient",
+   "gain_margin": 1.0
+  },
+  {
+   "lambda_nm": 648.7179487179487,
+   "driver": "noise",
+   "gain_margin": 1.01
+  },
+  {
+   "lambda_nm": 371.7948717948718,
+   "driver": "structure",
+   "gain_margin": 1.08
+  },
+  {
+   "lambda_nm": 330.7692307692308,
+   "driver": "gradient",
+   "gain_margin": 1.19
+  },
+  {
+   "lambda_nm": 453.84615384615387,
+   "driver": "gradient",
+   "gain_margin": 1.01
+  },
+  {
+   "lambda_nm": 669.2307692307693,
+   "driver": "noise",
+   "gain_margin": 1.01
+  }
+ ]
+}
