@@ -1,6 +1,7 @@
 """v3 tests: v2 equivalence, absolute scale, nuisance profiling /
 marginalization, and the greedy attention breakdown on the real void data."""
 import json
+import os
 
 import numpy as np
 
@@ -62,7 +63,8 @@ assert np.allclose(Fm, [[1.5]])
 ok.append("Schur marginalization")
 
 # --- 5. greedy breakdown reproduces the void centre story -----------------
-VAL = "/home/hatch/workspace/info_geo_diag/void_validation"
+VAL = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                   "results", "numbers")
 va = np.load(f"{VAL}/validation_arrays.npz")
 prof_data, cov_v = va["profile"], va["cov"]
 xc = va["xc"]

@@ -1,4 +1,7 @@
-"""Non-void application example 2: powder mixture composition.
+"""使用例（通常観測）: 分光の「チャンネル」が観測点。どの波長
+チャンネルが組成を決めるかを選ぶ、観測点選定の例。
+
+Non-void application example 2: powder mixture composition.
 
 A 4-component oxide powder (SiO2 / Al2O3 / Fe2O3 / TiO2 -- ceramic and
 glaze-like materials).  Observable: a reflectance spectrum in 40
@@ -13,6 +16,7 @@ which channels actually determine the composition (channel selection),
 and which component trade-offs stay degenerate (identifiability).
 """
 import json
+import os
 
 import numpy as np
 
@@ -74,6 +78,7 @@ out = {
         for r in recs],
 }
 print(json.dumps(out, indent=1))
-with open("/home/hatch/workspace/info_geo_diag/powder_example_numbers.json",
+with open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                       "powder_example_numbers.json"),
           "w") as f:
     json.dump(out, f, indent=1)

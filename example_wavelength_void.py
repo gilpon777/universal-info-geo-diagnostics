@@ -1,4 +1,7 @@
-"""Wavelength selection for ordinary observation: what is inside a void?
+"""使用例（通常観測）: 「波長帯」が観測点。ボイドの内容物をどの
+波長で見ればどの成分が立つかを選ぶ、観測点選定の例。
+
+Wavelength selection for ordinary observation: what is inside a void?
 
 The user's framework used as originally intended -- no events needed.
 Observation points = wavelength bands (radio to X-ray).  Model: the

@@ -1,4 +1,7 @@
-"""Non-void application example for the publication package:
+"""使用例（通常観測）: 反応連鎖の「測定時刻」が観測点。どの時刻を
+測れば速度定数が決まるかを選ぶ、観測点選定の例。
+
+Non-void application example for the publication package:
 a first-order reaction chain A -> B -> C -> D (biochemistry-style
 kinetics).  Observable: concentrations of B and C at 12 candidate
 sampling times.  Question, structurally identical to the void case:
@@ -13,6 +16,7 @@ theta = (k1, k2, k3, A0).  Noise: sigma = 0.01 + 0.03*value per point
 (heteroscedastic, diagonal).
 """
 import json
+import os
 
 import numpy as np
 
@@ -62,6 +66,7 @@ out = {
     "greedy_picks": picks,
 }
 print(json.dumps(out, indent=1))
-with open("/home/hatch/workspace/info_geo_diag/biochem_example_numbers.json",
+with open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                       "biochem_example_numbers.json"),
           "w") as f:
     json.dump(out, f, indent=1)

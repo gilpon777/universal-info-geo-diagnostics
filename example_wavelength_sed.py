@@ -1,4 +1,7 @@
-"""Wavelength selection for ordinary observation: galaxy SED decomposition.
+"""使用例（通常観測）: 「波長帯」が観測点。銀河の星・塵・AGN を
+どのバンドの組み合わせで切り分けるかを選ぶ、観測点選定の例。
+
+Wavelength selection for ordinary observation: galaxy SED decomposition.
 
 Companion to wavelength_void.py (same skeleton, user's request: both).
 Observation points = photometric bands (radio to X-ray).  Model: a

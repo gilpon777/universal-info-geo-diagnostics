@@ -8,13 +8,15 @@
     multiplier (~16,000 crossings) needed to reach SNR 1.
 """
 import json
+import os
 
 import numpy as np
 
 from universal_info_geo_diagnostics_v3 import (
     UniversalInformationGeometricDiagnosticsV3 as Diag)
 
-VAL = "/home/hatch/workspace/info_geo_diag/void_validation"
+VAL = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                   "results", "numbers")
 out = {}
 
 # ---------------- (1) void ----------------

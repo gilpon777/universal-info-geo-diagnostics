@@ -3,9 +3,12 @@
 2) 再パラメータ化（対角スケーリング）で Scaled 指標が不変、Raw が変動するか
 3) sloppy モデル（2指数関数の和）でスペクトルと r_eff がどう出るか
 """
-import numpy as np
+import os
 import sys
-sys.path.insert(0, "/home/hatch/workspace/info_geo_diag")
+
+import numpy as np
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from universal_info_geo_diagnostics_v2 import UniversalInformationGeometricDiagnosticsV2
 
 rng = np.random.default_rng(42)

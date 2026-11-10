@@ -4,12 +4,14 @@
 減衰率が近い成分同士は強く縮退する（古典的な sloppy 構造）。
 ノイズ入りの繰り返し観測サンプルから標本共分散を推定する実務設定で診断する。
 """
+import os
+
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import sys
-sys.path.insert(0, "/home/hatch/workspace/info_geo_diag")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from universal_info_geo_diagnostics_v2 import UniversalInformationGeometricDiagnosticsV2
 
 rng = np.random.default_rng(7)
@@ -72,5 +74,6 @@ ax.set_title("FIM eigenvalue spectrum: 3-exponential decay (6 params)")
 ax.legend()
 ax.grid(axis="y", alpha=0.3)
 fig.tight_layout()
-fig.savefig("/home/hatch/workspace/info_geo_diag/spectrum_demo.png", dpi=150)
+fig.savefig(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                         "spectrum_demo.png"), dpi=150)
 print("\n図を保存: spectrum_demo.png")
