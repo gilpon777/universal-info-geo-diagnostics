@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Universal Information-Geometric Diagnostics"
+authors:
+  - family-names: "Nakatani"
+    given-names: "Kenichi"
+version: "3.0"
+date-released: "2026-11-09"
+license: MIT
+abstract: "Black-box Fisher-information diagnostics for identifiability and observation-point selection, validated on cosmic-void, Milky Way, biochemistry and powder-mixture examples."
