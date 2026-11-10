@@ -57,6 +57,9 @@ picks[0]["GainMargin"]  # 次点との差（ほぼ同点かどうかが分かる
 | 合成 sloppy モデル | `demo_v2.py`, `demo_v3.py` | 固有値が数桁に広がる典型構造を検出 |
 | 生化学（反応連鎖 A→B→C→D） | `example_biochem.py` | 測定時刻の選定が時定数ごとに散らばる。マージンはほぼ同点 |
 | 粉末素材（酸化物4成分の組成） | `example_powder.py` | チャンネル選定が各成分の「指紋」に対応。勝因は勾配 |
+| 波長選択：ボイドの内容物 | `example_wavelength_void.py` | 観測点＝波長帯（電波〜X線19バンド）。成分ごとに担い手のバンドが分かれ、Scaled r_eff 4.62/7 |
+| 波長選択：銀河 SED 分解 | `example_wavelength_sed.py` | 星・塵・AGN の切り分け。塵の振幅が温度との退化で緩い。Scaled r_eff 5.26/7 |
+| 点レンズ検出可能性マップ | `example_lens_detectability.py` | (M, y) をパラメータとして Fisher 診断。理想テンプレート境界と実測の床の比較（`results/reports/lens_detectability_map.md`） |
 | 天の川銀河（実データ, Eilers+2019） | `results/reports/milkyway_validation.md` | Scaled r_eff 1.74/5。円盤–ハロー縮退が支配的 |
 | ボイド＋重力波（実データ） | `results/reports/` 一式 | 下記 |
 
@@ -71,6 +74,11 @@ picks[0]["GainMargin"]  # 次点との差（ほぼ同点かどうかが分かる
   点レンズ (M, y) 平面への翻訳では、観測が触れたのは「大質量 × 小衝突径数」の
   隅のみで、100 太陽質量級（ボイド内の「針」）は未検証のままである
   （`lens_observable_check.md`）。
+- 点レンズの検出可能性を前向きにも評価した: (ln M, y) の Fisher 診断では、
+  理想的なテンプレート法でも実測の床は割合で 1.3〜2.4 倍しか下がらず、
+  100 太陽質量級に届くのは GW250114 級の高 SNR イベントに限られる
+  （`lens_detectability_map.md`）。固有パラメータとの退化は未収録で、
+  実際のテンプレートの床は理想境界と実測の間に出るはず、と明記している。
 - 結論は一貫して「不在の証明ではなく、測れた範囲の地図」として書かれている。
 
 データ出典（再配布はしていない）: VAST ボイドカタログ（Douglass et al. 2023,
@@ -112,8 +120,12 @@ the VAST SDSS DR7 catalogue (386 voids; scaled r_eff 3.42/4), a Milky Way
 rotation-curve control (Eilers et al. 2019; scaled r_eff 1.74/5), and
 waveform-residual upper limits for four gravitational-wave events whose
 sightlines cross voids (GW231123, GW250114, GW240925, GW241011), including
-a point-lens (M, y) sensitivity map. Worked examples for biochemistry
-kinetics and powder-mixture composition are included. The components
+a point-lens (M, y) sensitivity map and a forward Fisher detectability
+map for template searches. Wavelength-selection examples — choosing
+which photometric bands identify the contents of a void, and which
+decompose a galaxy SED — return the framework to its original setting
+of ordinary, observer-directed observation. Worked examples for
+biochemistry kinetics and powder-mixture composition are included. The components
 (FIM spectra, optimal experimental design) are established; the
 positioning against prior tools (PyOED, SloppyCell, GWFish, Pyomo.DoE)
 and the specific differences of this implementation are documented in
