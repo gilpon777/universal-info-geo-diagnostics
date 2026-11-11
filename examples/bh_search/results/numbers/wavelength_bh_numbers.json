@@ -1,0 +1,198 @@
+{
+  "validation": {
+    "v2_max_rel_diff": 1.4915180378285615e-08
+  },
+  "quiescent": {
+    "label": "quiescent (A0620-like)",
+    "scaled_r_eff": 3.2866963957122257,
+    "raw_r_eff": 1.8272089946703134,
+    "direction_snr": [
+      1.8635894209863968,
+      1.000000421137333,
+      0.998040341067072,
+      0.5928196193031844,
+      0.41407185984461964,
+      0.08976914374945583
+    ],
+    "greedy": [
+      {
+        "band": "optical 550nm",
+        "driver": "noise",
+        "gain_margin": 1.0002885751259434,
+        "logdet_gain": 23.38641373795204
+      },
+      {
+        "band": "NIR 2.2um",
+        "driver": "gradient",
+        "gain_margin": 1.000896164598431,
+        "logdet_gain": 21.438220832237064
+      },
+      {
+        "band": "radio 150MHz",
+        "driver": "noise",
+        "gain_margin": 1.0000000003981215,
+        "logdet_gain": 20.264315746893047
+      },
+      {
+        "band": "NUV 230nm",
+        "driver": "noise",
+        "gain_margin": 1.0099538383972408,
+        "logdet_gain": 20.250469550419318
+      },
+      {
+        "band": "X-ray 0.5keV",
+        "driver": "gradient",
+        "gain_margin": 1.000173807268819,
+        "logdet_gain": 18.37048182783295
+      },
+      {
+        "band": "NIR 3.6um",
+        "driver": "gradient",
+        "gain_margin": 1.0010699995834864,
+        "logdet_gain": 15.699446246961482
+      },
+      {
+        "band": "optical 440nm",
+        "driver": "noise",
+        "gain_margin": 1.7386860085263756,
+        "logdet_gain": 1.6629945555390258
+      },
+      {
+        "band": "optical 900nm",
+        "driver": "noise",
+        "gain_margin": 1.218314261533624,
+        "logdet_gain": 0.9531887108898935
+      },
+      {
+        "band": "radio 1.4GHz",
+        "driver": "noise",
+        "gain_margin": 1.0000000606615402,
+        "logdet_gain": 0.6928669216408281
+      },
+      {
+        "band": "X-ray 1keV",
+        "driver": "gradient",
+        "gain_margin": 1.003744868501368,
+        "logdet_gain": 0.6915522470733748
+      }
+    ],
+    "cr_sigma_lnamp": {
+      "companion": 0.029041320325165362,
+      "disk": 0.08921421524257363,
+      "hot spot": 0.23207276351812306,
+      "jet": 0.06103603910498495,
+      "corona": 0.14575997520034378
+    },
+    "correlations": [
+      [
+        "companion",
+        "disk",
+        -0.6466047953566473
+      ],
+      [
+        "disk",
+        "hot spot",
+        -0.75000855200744
+      ]
+    ]
+  },
+  "hard": {
+    "label": "hard state (GX 339-4-like)",
+    "scaled_r_eff": 3.057824335505472,
+    "raw_r_eff": 1.3577211319178264,
+    "direction_snr": [
+      1.9122527883416733,
+      1.0000004187561826,
+      0.9634241815479412,
+      0.5518551849525839,
+      0.32400504326995344,
+      0.07469182788112437
+    ],
+    "greedy": [
+      {
+        "band": "optical 440nm",
+        "driver": "noise",
+        "gain_margin": 1.0031480903546894,
+        "logdet_gain": 23.35470508793223
+      },
+      {
+        "band": "radio 150MHz",
+        "driver": "noise",
+        "gain_margin": 1.000000000021582,
+        "logdet_gain": 20.55442758765659
+      },
+      {
+        "band": "optical 900nm",
+        "driver": "noise",
+        "gain_margin": 1.034138375891665,
+        "logdet_gain": 19.9035593173542
+      },
+      {
+        "band": "NIR 3.6um",
+        "driver": "noise",
+        "gain_margin": 1.00851021080109,
+        "logdet_gain": 18.529931229275785
+      },
+      {
+        "band": "X-ray 0.5keV",
+        "driver": "gradient",
+        "gain_margin": 1.0000464216699072,
+        "logdet_gain": 18.373568317336158
+      },
+      {
+        "band": "optical 550nm",
+        "driver": "noise",
+        "gain_margin": 1.0197104294359052,
+        "logdet_gain": 14.773429607723461
+      },
+      {
+        "band": "NIR 2.2um",
+        "driver": "noise",
+        "gain_margin": 1.0124233651728805,
+        "logdet_gain": 1.0202601377377434
+      },
+      {
+        "band": "radio 1.4GHz",
+        "driver": "noise",
+        "gain_margin": 1.0000000030694287,
+        "logdet_gain": 0.6927483931177179
+      },
+      {
+        "band": "X-ray 1keV",
+        "driver": "gradient",
+        "gain_margin": 1.0009997218589237,
+        "logdet_gain": 0.6927208179115425
+      },
+      {
+        "band": "NIR 1.2um",
+        "driver": "gradient",
+        "gain_margin": 1.505398459686501,
+        "logdet_gain": 0.6101863841778794
+      }
+    ],
+    "cr_sigma_lnamp": {
+      "companion": 0.16152385872226968,
+      "disk": 0.046494866827447294,
+      "hot spot": 0.3557123853828313,
+      "jet": 0.05264286109125442,
+      "corona": 0.14509948750466345
+    },
+    "correlations": [
+      [
+        "companion",
+        "disk",
+        -0.7629910710654001
+      ],
+      [
+        "companion",
+        "hot spot",
+        0.3130800044499678
+      ],
+      [
+        "disk",
+        "hot spot",
+        -0.789273234176724
+      ]
+    ]
+  }
+}

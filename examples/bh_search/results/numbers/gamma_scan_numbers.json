@@ -1,0 +1,29 @@
+{
+  "accreting binary / microquasar (outburst)": {
+    "L": 3e+36,
+    "horizon_plane_pc": 28906.741998586698,
+    "horizon_hilat_pc": 91411.14445038178
+  },
+  "accreting binary (quiescent)": {
+    "L": 3e+32,
+    "horizon_plane_pc": 289.067419985867,
+    "horizon_hilat_pc": 914.1114445038177
+  },
+  "isolated, ISM accretion (optimistic)": {
+    "L": 1e+30,
+    "horizon_plane_pc": 16.689315274279092,
+    "horizon_hilat_pc": 52.77624885535969
+  },
+  "isolated, ISM accretion (typical)": {
+    "L": 1e+28,
+    "horizon_plane_pc": 1.6689315274279093,
+    "horizon_hilat_pc": 5.2776248855359675
+  },
+  "dormant (Gaia BH type)": {
+    "L": 0.0,
+    "horizon_plane_pc": 0.0,
+    "horizon_hilat_pc": 0.0
+  },
+  "count_within_L1e+30": 9.735856640891484,
+  "count_within_L1e+28": 0.009735856640891487
+}

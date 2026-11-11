@@ -1,0 +1,51 @@
+{
+  "image_shape": [
+    1024,
+    1024
+  ],
+  "background": 0.32095687091350555,
+  "sigma_mad": 0.3585336766451597,
+  "n_points": 3284,
+  "pixscale_arcsec": 0.26200000000000007,
+  "area_arcmin2": 19.994014151111124,
+  "density_per_arcmin2": 164.24915853215492,
+  "gaia_in_footprint": 6013,
+  "extracted_matched": 3207,
+  "offset_median_mas": [
+    14.77809353037836,
+    -32.93806965416479
+  ],
+  "offset_scatter_mas_per_axis": [
+    62.90472909473056,
+    73.87288183057706
+  ],
+  "offset_scatter_total_mas": 97.02683964984041,
+  "bright_Glt18_n": 1706,
+  "bright_scatter_mas_per_axis": [
+    40.15857905489036,
+    52.96234049044372
+  ],
+  "bright_scatter_total_mas": 66.46593850938669,
+  "completeness_from_gaia": {
+    "G10-16": {
+      "n": 368,
+      "recovered": 0.9782608695652174
+    },
+    "G16-18": {
+      "n": 1400,
+      "recovered": 0.9657142857142857
+    },
+    "G18-19": {
+      "n": 2106,
+      "recovered": 0.7207977207977208
+    },
+    "G19-20": {
+      "n": 2119,
+      "recovered": 0.12458706937234544
+    },
+    "G20-22": {
+      "n": 1,
+      "recovered": 0.0
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "gamma (Fermi-LAT, plane)": {
+    "lambda_m": 1e-12,
+    "horizon_pc": 173.09727515667794,
+    "channel": "accretion"
+  },
+  "X-ray (eROSITA all-sky)": {
+    "lambda_m": 5e-10,
+    "horizon_pc": 703.1244555553448,
+    "channel": "accretion"
+  },
+  "UV (GALEX-like, plane)": {
+    "lambda_m": 2e-07,
+    "horizon_pc": 580.585910955476,
+    "channel": "companion+disk"
+  },
+  "optical (Gaia astrometry)": {
+    "lambda_m": 6e-07,
+    "horizon_pc": 8000,
+    "channel": "companion dynamics"
+  },
+  "NIR (AO / VVV-like)": {
+    "lambda_m": 2.2e-06,
+    "horizon_pc": 15000,
+    "channel": "companion dynamics"
+  },
+  "MIR (WISE)": {
+    "lambda_m": 1.2e-05,
+    "horizon_pc": 1835.9738560230098,
+    "channel": "companion (faint)"
+  },
+  "submm (ALMA pointed)": {
+    "lambda_m": 0.001,
+    "horizon_pc": 1676.0071598892412,
+    "channel": "jet tail"
+  },
+  "radio (VLA/SKA-pathfinder)": {
+    "lambda_m": 0.06,
+    "horizon_pc": 2370.2320561497772,
+    "channel": "jet"
+  },
+  "sources": {
+    "gamma (Fermi)": 7000.0,
+    "X-ray (eROSITA)": 1000000.0,
+    "optical (Gaia/OGLE)": 1000000000.0,
+    "radio (VLBI surveys)": 10000.0
+  }
+}
