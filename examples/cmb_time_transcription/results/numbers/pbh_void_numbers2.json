@@ -1,0 +1,152 @@
+{
+  "formation_bias": {
+    "nu=5,db=-3e-05": 0.9983346659878989,
+    "nu=5,db=-1e-05": 0.9994445925674483,
+    "nu=5,db=1e-05": 1.0005557037288548,
+    "nu=5,db=3e-05": 1.001668000679261,
+    "nu=6,db=-3e-05": 0.9976027978891538,
+    "nu=6,db=-1e-05": 0.999200311032908,
+    "nu=6,db=1e-05": 1.0008003111893486,
+    "nu=6,db=3e-05": 1.0024028021131541,
+    "nu=7,db=-3e-05": 0.9967385545500471,
+    "nu=7,db=-1e-05": 0.9989116916499031,
+    "nu=7,db=1e-05": 1.0010894698316866,
+    "nu=7,db=3e-05": 1.0032718987916254,
+    "nu=8,db=-3e-05": 0.9957422810072825,
+    "nu=8,db=-1e-05": 0.9985787728765075,
+    "nu=8,db=1e-05": 1.0014232182349174,
+    "nu=8,db=3e-05": 1.004275639017767
+  },
+  "remnant_scenarios": {
+    "f=1e-12,Ncl=30,eta=0.3": {
+      "M_rem_Msun": 27.0,
+      "in_GW_window": false,
+      "remnants_per_void": {
+        "large_R30": 6.352300345558561,
+        "local_R22.5": 2.6798767082825177
+      },
+      "phi_remnant": 0.3
+    },
+    "f=1e-12,Ncl=100,eta=0.3": {
+      "M_rem_Msun": 90.0,
+      "in_GW_window": false,
+      "remnants_per_void": {
+        "large_R30": 1.9056901036675682,
+        "local_R22.5": 0.8039630124847552
+      },
+      "phi_remnant": 0.3
+    },
+    "f=1e-12,Ncl=300,eta=0.3": {
+      "M_rem_Msun": 270.0,
+      "in_GW_window": true,
+      "remnants_per_void": {
+        "large_R30": 0.6352300345558561,
+        "local_R22.5": 0.26798767082825176
+      },
+      "phi_remnant": 0.3
+    },
+    "f=1e-12,Ncl=100,eta=0.5": {
+      "M_rem_Msun": 150.0,
+      "in_GW_window": true,
+      "remnants_per_void": {
+        "large_R30": 1.9056901036675682,
+        "local_R22.5": 0.8039630124847552
+      },
+      "phi_remnant": 0.5
+    },
+    "f=1e-12,Ncl=300,eta=0.5": {
+      "M_rem_Msun": 450.0,
+      "in_GW_window": true,
+      "remnants_per_void": {
+        "large_R30": 0.6352300345558561,
+        "local_R22.5": 0.26798767082825176
+      },
+      "phi_remnant": 0.5
+    },
+    "f=1e-12,Ncl=1000,eta=0.5": {
+      "M_rem_Msun": 1500.0,
+      "in_GW_window": true,
+      "remnants_per_void": {
+        "large_R30": 0.19056901036675683,
+        "local_R22.5": 0.08039630124847552
+      },
+      "phi_remnant": 0.5
+    },
+    "f=1e-09,Ncl=30,eta=0.3": {
+      "M_rem_Msun": 27.0,
+      "in_GW_window": false,
+      "remnants_per_void": {
+        "large_R30": 6352.300345558561,
+        "local_R22.5": 2679.8767082825184
+      },
+      "phi_remnant": 0.3
+    },
+    "f=1e-09,Ncl=100,eta=0.3": {
+      "M_rem_Msun": 90.0,
+      "in_GW_window": false,
+      "remnants_per_void": {
+        "large_R30": 1905.6901036675686,
+        "local_R22.5": 803.9630124847555
+      },
+      "phi_remnant": 0.3
+    },
+    "f=1e-09,Ncl=300,eta=0.3": {
+      "M_rem_Msun": 270.0,
+      "in_GW_window": true,
+      "remnants_per_void": {
+        "large_R30": 635.2300345558562,
+        "local_R22.5": 267.9876708282518
+      },
+      "phi_remnant": 0.3
+    },
+    "f=1e-09,Ncl=100,eta=0.5": {
+      "M_rem_Msun": 150.0,
+      "in_GW_window": true,
+      "remnants_per_void": {
+        "large_R30": 1905.6901036675686,
+        "local_R22.5": 803.9630124847555
+      },
+      "phi_remnant": 0.5
+    },
+    "f=1e-09,Ncl=300,eta=0.5": {
+      "M_rem_Msun": 450.0,
+      "in_GW_window": true,
+      "remnants_per_void": {
+        "large_R30": 635.2300345558562,
+        "local_R22.5": 267.9876708282518
+      },
+      "phi_remnant": 0.5
+    },
+    "f=1e-09,Ncl=1000,eta=0.5": {
+      "M_rem_Msun": 1500.0,
+      "in_GW_window": true,
+      "remnants_per_void": {
+        "large_R30": 190.56901036675686,
+        "local_R22.5": 80.39630124847555
+      },
+      "phi_remnant": 0.5
+    }
+  },
+  "tau_det_f1e-9": {
+    "v1 (全部 3 Msun, w=0.007)": {
+      "GW231123": 0.0,
+      "GW240925_LocalVoid": 0.0,
+      "GW241011_LocalVoid": 0.0
+    },
+    "暴走あり phi=0.3": {
+      "GW231123": 5.04e-14,
+      "GW240925_LocalVoid": 7.65e-16,
+      "GW241011_LocalVoid": 7.41e-16
+    },
+    "暴走あり phi=0.5": {
+      "GW231123": 8.4e-14,
+      "GW240925_LocalVoid": 1.2750000000000002e-15,
+      "GW241011_LocalVoid": 1.2350000000000001e-15
+    }
+  },
+  "tail_test": {
+    "p_void_Delta>1": 0.238634562313184,
+    "p_field_Delta>1": 0.044565462758543006,
+    "n_per_group": 50.66148118156026
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "sigma_tot_dex": 0.5,
+  "n_analytic_per_group": {
+    "delta=1.0": 4,
+    "delta=0.7": 9,
+    "delta=0.5": 16,
+    "delta=0.3": 44,
+    "delta=0.2": 99
+  },
+  "mc_min_n_per_group": {
+    "delta=0.5,censor=0.0": [
+      20,
+      0.86
+    ],
+    "delta=0.5,censor=0.5": [
+      30,
+      0.87
+    ],
+    "delta=0.3,censor=0.0": [
+      45,
+      0.83
+    ],
+    "delta=0.3,censor=0.5": [
+      90,
+      0.85
+    ],
+    "delta=1.0,censor=0.5": [
+      10,
+      0.96
+    ]
+  }
+}
