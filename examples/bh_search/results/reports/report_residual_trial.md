@@ -34,7 +34,7 @@
 
 - 転記時の照合: 全 293 件の RUWE 帯域別件数は
   取得側の報告と完全一致 (19/31/74/169)。
-- NSS件数は取得側メモでは17件とされていたが、gaia_patch.csv（293行）を直接集計したところ 1:10、2:1、3:2 の計13件であり、転記の13件が正しい。メモの数え違いだった。
+- NSS件数は取得側メモでは17件とされていたが、gaia_patch.csv（293行）を直接集計したところ 1:10、2:1、3:2 の計13件であり、転記の13件が正しい。メモの数え違いだった。検証方法：gaia_patch.csv（293行）のNSS列を直接集計し直し、residual_scan_numbers.json の nss_counts（1:10、2:1、3:2）および nss_shortlist.md の13件の一覧と一致することを確認した。
 
 ファイル: residual_scan.py、test_residual_scan.py
 (全通過)、gaia_patch.csv、residual_scan_numbers.json
