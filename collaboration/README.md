@@ -1,4 +1,4 @@
-# Claude × ChatGPT 協働テーマ
+# Muse × ChatGPT 協働テーマ
 
 このフォルダは、Muse（実装・検証）と ChatGPT（レビュー）を中谷がつないで進める協働テーマのための置き場です。
 
