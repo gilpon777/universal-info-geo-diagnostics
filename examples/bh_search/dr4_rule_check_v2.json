@@ -1,0 +1,385 @@
+{
+  "method": "v2: photometric margin with A_G,max deducted; #10 RV lower-bound only; two-axis labels (Claude v5 §7A); M1 union range for MS-unfit; M1 sensitivity over [0.3, 5]; DR3 labels are provisional (§7F)",
+  "AG_convention": "A_G <= A_V なので A_G,max = max(GSP-Phot の A_G (あれば), TGE の a0 を A_V 天井として)。Claude v5 §3.4/§7E の条文に従う。TGE は HEALPix level 6 (nside=64), NESTED ordering, healpix_id は healpy ang2pix(nest=True) で算出。ESA TAP 本体 (gea.esac.esa.int) は本環境から到達不可 (HTTP 000) のため ARI ミラー TAP を使用。GSP-Phot 値は既存 gaia_gspphot_13.csv と完全一致。",
+  "rows": [
+    {
+      "num": 1,
+      "sid": "4373996966286538240",
+      "G": 10.88,
+      "M_G": 6.94,
+      "AG_gspphot": null,
+      "TGE_a0": 1.1139,
+      "AG_max": 1.1139,
+      "AG_max_source": "TGE a0 (A_V 天井)",
+      "MS_flag": "要注意（主系列より赤い：進化星/未分解連星の可能性）",
+      "M1_range": [
+        0.58,
+        0.95
+      ],
+      "M1_range_note": "従来範囲",
+      "mass_axis": "対象外",
+      "photo_axis": "不要",
+      "final_label": "軌道解なし"
+    },
+    {
+      "num": 2,
+      "sid": "4370422312249022848",
+      "G": 11.5,
+      "M_G": 6.17,
+      "AG_gspphot": 0.207,
+      "TGE_a0": 1.0468,
+      "AG_max": 1.0468,
+      "AG_max_source": "TGE a0 (A_V 天井)",
+      "MS_flag": "概ね妥当",
+      "M1_range": [
+        0.66,
+        1.11
+      ],
+      "M1_range_note": "従来範囲",
+      "mass_axis": "対象外",
+      "photo_axis": "不要",
+      "final_label": "軌道解なし"
+    },
+    {
+      "num": 3,
+      "sid": "4375405814342089344",
+      "G": 13.19,
+      "M_G": 6.1,
+      "AG_gspphot": 0.5942,
+      "TGE_a0": 1.0608,
+      "AG_max": 1.0608,
+      "AG_max_source": "TGE a0 (A_V 天井)",
+      "MS_flag": "概ね妥当",
+      "M1_range": [
+        0.67,
+        1.18
+      ],
+      "M1_range_note": "従来範囲",
+      "mass_axis": "対象外",
+      "photo_axis": "不要",
+      "final_label": "軌道解なし"
+    },
+    {
+      "num": 4,
+      "sid": "4370723823251080832",
+      "G": 11.72,
+      "M_G": 3.61,
+      "AG_gspphot": 0.4042,
+      "TGE_a0": 0.9811,
+      "AG_max": 0.9811,
+      "AG_max_source": "TGE a0 (A_V 天井)",
+      "MS_flag": "概ね妥当",
+      "M1_range": [
+        1.06,
+        1.87
+      ],
+      "M1_range_note": "従来範囲",
+      "f_kind": "f_ast_indep",
+      "f_ci95": [
+        0.05233,
+        0.09914
+      ],
+      "M2_low": 0.504,
+      "M2_high": 0.917,
+      "mass_axis": "非支持",
+      "MG_MS_at_M2_low": 8.1,
+      "photometric_margin_mag": -5.47,
+      "M_G0_AGmax": 2.63,
+      "photo_axis_note": "測光余裕 < 1 等",
+      "photo_axis": "排除できない",
+      "M1_sensitivity": {
+        "at_0.3": "非支持",
+        "at_5": "非支持",
+        "label_changes": false
+      },
+      "final_label": "BH非支持"
+    },
+    {
+      "num": 5,
+      "sid": "4373686556112920192",
+      "G": 12.11,
+      "M_G": 2.89,
+      "AG_gspphot": 0.5465,
+      "TGE_a0": 1.1048,
+      "AG_max": 1.1048,
+      "AG_max_source": "TGE a0 (A_V 天井)",
+      "MS_flag": "要注意（主系列より赤い：進化星/未分解連星の可能性）",
+      "M1_range": [
+        1.23,
+        2.2
+      ],
+      "M1_range_note": "従来範囲",
+      "mass_axis": "対象外",
+      "photo_axis": "不要",
+      "final_label": "軌道解なし"
+    },
+    {
+      "num": 6,
+      "sid": "4373465352415301632",
+      "G": 13.77,
+      "M_G": 5.35,
+      "AG_gspphot": 0.5575,
+      "TGE_a0": 1.4387,
+      "AG_max": 1.4387,
+      "AG_max_source": "TGE a0 (A_V 天井)",
+      "MS_flag": "概ね妥当",
+      "M1_range": [
+        0.74,
+        1.31
+      ],
+      "M1_range_note": "従来範囲",
+      "f_kind": "f_ast_frozen_cov",
+      "f_ci95": [
+        7.58,
+        18.14
+      ],
+      "M2_low": 8.899,
+      "M2_high": 20.531,
+      "mass_axis": "支持",
+      "MG_MS_at_M2_low": -2.74,
+      "photometric_margin_mag": 6.65,
+      "M_G0_AGmax": 3.91,
+      "photo_axis": "排除済み",
+      "M1_sensitivity": {
+        "at_0.3": "支持",
+        "at_5": "支持",
+        "label_changes": false
+      },
+      "final_label": "BH候補"
+    },
+    {
+      "num": 7,
+      "sid": "4374096880110414080",
+      "G": 12.04,
+      "M_G": 4.79,
+      "AG_gspphot": 0.5238,
+      "TGE_a0": 1.1139,
+      "AG_max": 1.1139,
+      "AG_max_source": "TGE a0 (A_V 天井)",
+      "MS_flag": "概ね妥当",
+      "M1_range": [
+        0.81,
+        1.48
+      ],
+      "M1_range_note": "従来範囲",
+      "f_kind": "f_ast_indep",
+      "f_ci95": [
+        0.03591,
+        0.06672
+      ],
+      "M2_low": 0.367,
+      "M2_high": 0.678,
+      "mass_axis": "非支持",
+      "MG_MS_at_M2_low": 8.1,
+      "photometric_margin_mag": -4.42,
+      "M_G0_AGmax": 3.68,
+      "photo_axis_note": "測光余裕 < 1 等",
+      "photo_axis": "排除できない",
+      "M1_sensitivity": {
+        "at_0.3": "非支持",
+        "at_5": "非支持",
+        "label_changes": false
+      },
+      "final_label": "BH非支持"
+    },
+    {
+      "num": 8,
+      "sid": "4373878115952155776",
+      "G": 14.3,
+      "M_G": 6.46,
+      "AG_gspphot": null,
+      "TGE_a0": 1.2589,
+      "AG_max": 1.2589,
+      "AG_max_source": "TGE a0 (A_V 天井)",
+      "MS_flag": "要注意（主系列より赤い：進化星/未分解連星の可能性）",
+      "M1_range": [
+        0.63,
+        1.03
+      ],
+      "M1_range_note": "従来範囲",
+      "f_kind": "f_ast_indep",
+      "f_ci95": [
+        0.02471,
+        0.0766
+      ],
+      "M2_low": 0.273,
+      "M2_high": 0.584,
+      "mass_axis": "非支持",
+      "MG_MS_at_M2_low": 8.1,
+      "photometric_margin_mag": -2.9,
+      "M_G0_AGmax": 5.2,
+      "photo_axis_note": "測光余裕 < 1 等",
+      "photo_axis": "排除できない",
+      "M1_sensitivity": {
+        "at_0.3": "非支持",
+        "at_5": "非支持",
+        "label_changes": false
+      },
+      "final_label": "BH非支持"
+    },
+    {
+      "num": 9,
+      "sid": "4370289481799067008",
+      "G": 10.31,
+      "M_G": 4.32,
+      "AG_gspphot": 0.3036,
+      "TGE_a0": 1.4664,
+      "AG_max": 1.4664,
+      "AG_max_source": "TGE a0 (A_V 天井)",
+      "MS_flag": "概ね妥当",
+      "M1_range": [
+        0.9,
+        1.57
+      ],
+      "M1_range_note": "従来範囲",
+      "f_kind": "f_ast_indep",
+      "f_ci95": [
+        0.01417,
+        0.02492
+      ],
+      "M2_low": 0.269,
+      "M2_high": 0.47,
+      "mass_axis": "非支持",
+      "MG_MS_at_M2_low": 8.1,
+      "photometric_margin_mag": -5.25,
+      "M_G0_AGmax": 2.85,
+      "photo_axis_note": "測光余裕 < 1 等",
+      "photo_axis": "排除できない",
+      "M1_sensitivity": {
+        "at_0.3": "非支持",
+        "at_5": "非支持",
+        "label_changes": false
+      },
+      "final_label": "BH非支持"
+    },
+    {
+      "num": 10,
+      "sid": "4373814997114111744",
+      "G": 11.32,
+      "M_G": 5.08,
+      "AG_gspphot": null,
+      "TGE_a0": 1.0004,
+      "AG_max": 1.0004,
+      "AG_max_source": "TGE a0 (A_V 天井)",
+      "MS_flag": "概ね妥当",
+      "M1_range": [
+        0.77,
+        1.25
+      ],
+      "M1_range_note": "従来範囲",
+      "f_kind": "f_rv_indep",
+      "f_ci95": [
+        5.497e-05,
+        0.0002134
+      ],
+      "M2_low": 0.033,
+      "M2_high": null,
+      "M2_high_note": "なし（傾斜角未確定）",
+      "mass_axis": "保留",
+      "MG_MS_at_M2_low": 8.1,
+      "photometric_margin_mag": -4.02,
+      "M_G0_AGmax": 4.08,
+      "photo_axis_note": "測光余裕 < 1 等",
+      "photo_axis": "排除できない",
+      "M1_sensitivity": {
+        "at_0.3": "保留",
+        "at_5": "保留",
+        "label_changes": false
+      },
+      "final_label": "判定保留（軌道傾斜角未確定）"
+    },
+    {
+      "num": 11,
+      "sid": "4370722517581033088",
+      "G": 13.58,
+      "M_G": 5.28,
+      "AG_gspphot": 0.615,
+      "TGE_a0": 0.9811,
+      "AG_max": 0.9811,
+      "AG_max_source": "TGE a0 (A_V 天井)",
+      "MS_flag": "概ね妥当",
+      "M1_range": [
+        0.75,
+        1.35
+      ],
+      "M1_range_note": "従来範囲",
+      "mass_axis": "対象外",
+      "photo_axis": "不要",
+      "final_label": "軌道解なし"
+    },
+    {
+      "num": 12,
+      "sid": "4370246910083179136",
+      "G": 15.15,
+      "M_G": 8.41,
+      "AG_gspphot": 2.6713,
+      "TGE_a0": 1.4664,
+      "AG_max": 2.6713,
+      "AG_max_source": "GSP-Phot A_G",
+      "MS_flag": "要注意（主系列より青い：減光推定の過大評価の可能性）",
+      "M1_range": [
+        0.48,
+        1.14
+      ],
+      "M1_range_note": "従来範囲",
+      "f_kind": "f_ast_indep",
+      "f_ci95": [
+        0.2039,
+        82.7
+      ],
+      "f_ci95_cov_note": [
+        0.078,
+        90.3
+      ],
+      "M2_low": 0.632,
+      "M2_high": 84.941,
+      "mass_axis": "保留",
+      "MG_MS_at_M2_low": 7.8,
+      "photometric_margin_mag": -2.06,
+      "M_G0_AGmax": 5.74,
+      "photo_axis_note": "測光余裕 < 1 等",
+      "photo_axis": "排除できない",
+      "M1_sensitivity": {
+        "at_0.3": "保留",
+        "at_5": "保留",
+        "label_changes": false
+      },
+      "final_label": "判定保留"
+    },
+    {
+      "num": 13,
+      "sid": "4375290679157690368",
+      "G": 8.94,
+      "M_G": 0.69,
+      "AG_gspphot": 0.5131,
+      "TGE_a0": 0.929,
+      "AG_max": 0.929,
+      "AG_max_source": "TGE a0 (A_V 天井)",
+      "MS_flag": "不適（色が主系列より大幅に赤い＝進化星の疑い）",
+      "M1_range": [
+        1.0,
+        3.45
+      ],
+      "M1_range_note": "従来範囲と [1.0, 3.0] の和集合",
+      "f_kind": "f_ast_indep",
+      "f_ci95": [
+        0.04256,
+        0.07199
+      ],
+      "M2_low": 0.447,
+      "M2_high": 1.151,
+      "mass_axis": "非支持",
+      "MG_MS_at_M2_low": 8.1,
+      "photometric_margin_mag": -8.34,
+      "M_G0_AGmax": -0.24,
+      "photo_axis_note": "M_G,0 (= M_G − A_G,max) < 2",
+      "photo_axis": "排除できない",
+      "M1_sensitivity": {
+        "at_0.3": "非支持",
+        "at_5": "非支持",
+        "label_changes": false
+      },
+      "final_label": "BH非支持（測光軸: 排除できない（M_G,0<2））"
+    }
+  ]
+}
