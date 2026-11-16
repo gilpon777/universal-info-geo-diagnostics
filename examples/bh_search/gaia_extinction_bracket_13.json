@@ -1,0 +1,337 @@
+{
+  "method": "A_G,max = max(GSP-Phot A_G, TGE a0)（現行）と A_G,max' = max(MSC A_G, TGE a0)（変種）のブラケット比較。MSC は gaiadr3.astrophysical_parameters の ag_msc（点推定）。",
+  "rows": [
+    {
+      "num": 1,
+      "source_id": "4373996966286538240",
+      "AG_gspphot": null,
+      "AG_gspphot_16_84": null,
+      "AG_msc": 0.5723,
+      "AG_msc_16_84": [
+        0.4492,
+        0.7254
+      ],
+      "TGE_a0": 1.1139,
+      "AG_max_current_max_GSP_TGE": 1.1139,
+      "AG_max_variant_max_MSC_TGE": 1.1139,
+      "AG_max_changed": false,
+      "final_label_current": "軌道解なし",
+      "M1_range_current": [
+        0.58,
+        0.95
+      ]
+    },
+    {
+      "num": 2,
+      "source_id": "4370422312249022848",
+      "AG_gspphot": 0.207,
+      "AG_gspphot_16_84": [
+        0.1998,
+        0.2136
+      ],
+      "AG_msc": 0.2129,
+      "AG_msc_16_84": [
+        0.0,
+        0.5085
+      ],
+      "TGE_a0": 1.0468,
+      "AG_max_current_max_GSP_TGE": 1.0468,
+      "AG_max_variant_max_MSC_TGE": 1.0468,
+      "AG_max_changed": false,
+      "final_label_current": "軌道解なし",
+      "M1_range_current": [
+        0.66,
+        1.11
+      ]
+    },
+    {
+      "num": 3,
+      "source_id": "4375405814342089344",
+      "AG_gspphot": 0.5942,
+      "AG_gspphot_16_84": [
+        0.5432,
+        0.6902
+      ],
+      "AG_msc": 0.5366,
+      "AG_msc_16_84": [
+        0.5269,
+        0.6686
+      ],
+      "TGE_a0": 1.0608,
+      "AG_max_current_max_GSP_TGE": 1.0608,
+      "AG_max_variant_max_MSC_TGE": 1.0608,
+      "AG_max_changed": false,
+      "final_label_current": "軌道解なし",
+      "M1_range_current": [
+        0.67,
+        1.18
+      ]
+    },
+    {
+      "num": 4,
+      "source_id": "4370723823251080832",
+      "AG_gspphot": 0.4042,
+      "AG_gspphot_16_84": [
+        0.3963,
+        0.4085
+      ],
+      "AG_msc": 0.3249,
+      "AG_msc_16_84": [
+        0.2809,
+        5.0
+      ],
+      "TGE_a0": 0.9811,
+      "AG_max_current_max_GSP_TGE": 0.9811,
+      "AG_max_variant_max_MSC_TGE": 0.9811,
+      "AG_max_changed": false,
+      "final_label_current": "BH非支持",
+      "photometric_margin_current": -5.47,
+      "photometric_margin_variant": -5.47,
+      "photo_axis_current": "排除できない",
+      "M_G0_variant": 2.63,
+      "M1_range_current": [
+        1.06,
+        1.87
+      ]
+    },
+    {
+      "num": 5,
+      "source_id": "4373686556112920192",
+      "AG_gspphot": 0.5465,
+      "AG_gspphot_16_84": [
+        0.5406,
+        0.5541
+      ],
+      "AG_msc": 0.3324,
+      "AG_msc_16_84": [
+        0.0569,
+        0.3746
+      ],
+      "TGE_a0": 1.1048,
+      "AG_max_current_max_GSP_TGE": 1.1048,
+      "AG_max_variant_max_MSC_TGE": 1.1048,
+      "AG_max_changed": false,
+      "final_label_current": "軌道解なし",
+      "M1_range_current": [
+        1.23,
+        2.2
+      ]
+    },
+    {
+      "num": 6,
+      "source_id": "4373465352415301632",
+      "AG_gspphot": 0.5575,
+      "AG_gspphot_16_84": [
+        0.5462,
+        0.6345
+      ],
+      "AG_msc": 0.8966,
+      "AG_msc_16_84": [
+        0.6994,
+        3.7413
+      ],
+      "TGE_a0": 1.4387,
+      "AG_max_current_max_GSP_TGE": 1.4387,
+      "AG_max_variant_max_MSC_TGE": 1.4387,
+      "AG_max_changed": false,
+      "final_label_current": "BH候補",
+      "photometric_margin_current": 6.65,
+      "photometric_margin_variant": 6.65,
+      "photo_axis_current": "排除済み",
+      "M_G0_variant": 3.91,
+      "M1_range_current": [
+        0.74,
+        1.31
+      ]
+    },
+    {
+      "num": 7,
+      "source_id": "4374096880110414080",
+      "AG_gspphot": 0.5238,
+      "AG_gspphot_16_84": [
+        0.49,
+        0.5573
+      ],
+      "AG_msc": 0.0819,
+      "AG_msc_16_84": [
+        0.0521,
+        0.2144
+      ],
+      "TGE_a0": 1.1139,
+      "AG_max_current_max_GSP_TGE": 1.1139,
+      "AG_max_variant_max_MSC_TGE": 1.1139,
+      "AG_max_changed": false,
+      "final_label_current": "BH非支持",
+      "photometric_margin_current": -4.42,
+      "photometric_margin_variant": -4.42,
+      "photo_axis_current": "排除できない",
+      "M_G0_variant": 3.68,
+      "M1_range_current": [
+        0.81,
+        1.48
+      ]
+    },
+    {
+      "num": 8,
+      "source_id": "4373878115952155776",
+      "AG_gspphot": null,
+      "AG_gspphot_16_84": null,
+      "AG_msc": 0.3514,
+      "AG_msc_16_84": [
+        0.2034,
+        0.5087
+      ],
+      "TGE_a0": 1.2589,
+      "AG_max_current_max_GSP_TGE": 1.2589,
+      "AG_max_variant_max_MSC_TGE": 1.2589,
+      "AG_max_changed": false,
+      "final_label_current": "BH非支持",
+      "photometric_margin_current": -2.9,
+      "photometric_margin_variant": -2.9,
+      "photo_axis_current": "排除できない",
+      "M_G0_variant": 5.2,
+      "M1_range_current": [
+        0.63,
+        1.03
+      ]
+    },
+    {
+      "num": 9,
+      "source_id": "4370289481799067008",
+      "AG_gspphot": 0.3036,
+      "AG_gspphot_16_84": [
+        0.2981,
+        0.3063
+      ],
+      "AG_msc": 0.3891,
+      "AG_msc_16_84": [
+        0.0,
+        3.7048
+      ],
+      "TGE_a0": 1.4664,
+      "AG_max_current_max_GSP_TGE": 1.4664,
+      "AG_max_variant_max_MSC_TGE": 1.4664,
+      "AG_max_changed": false,
+      "final_label_current": "BH非支持",
+      "photometric_margin_current": -5.25,
+      "photometric_margin_variant": -5.25,
+      "photo_axis_current": "排除できない",
+      "M_G0_variant": 2.85,
+      "M1_range_current": [
+        0.9,
+        1.57
+      ]
+    },
+    {
+      "num": 10,
+      "source_id": "4373814997114111744",
+      "AG_gspphot": null,
+      "AG_gspphot_16_84": null,
+      "AG_msc": 0.3406,
+      "AG_msc_16_84": [
+        0.151,
+        0.4455
+      ],
+      "TGE_a0": 1.0004,
+      "AG_max_current_max_GSP_TGE": 1.0004,
+      "AG_max_variant_max_MSC_TGE": 1.0004,
+      "AG_max_changed": false,
+      "final_label_current": "判定保留（軌道傾斜角未確定）",
+      "photometric_margin_current": -4.02,
+      "photometric_margin_variant": -4.02,
+      "photo_axis_current": "排除できない",
+      "M_G0_variant": 4.08,
+      "M1_range_current": [
+        0.77,
+        1.25
+      ]
+    },
+    {
+      "num": 11,
+      "source_id": "4370722517581033088",
+      "AG_gspphot": 0.615,
+      "AG_gspphot_16_84": [
+        0.4497,
+        0.8438
+      ],
+      "AG_msc": 0.7279,
+      "AG_msc_16_84": [
+        0.0,
+        0.9698
+      ],
+      "TGE_a0": 0.9811,
+      "AG_max_current_max_GSP_TGE": 0.9811,
+      "AG_max_variant_max_MSC_TGE": 0.9811,
+      "AG_max_changed": false,
+      "final_label_current": "軌道解なし",
+      "M1_range_current": [
+        0.75,
+        1.35
+      ]
+    },
+    {
+      "num": 12,
+      "source_id": "4370246910083179136",
+      "AG_gspphot": 2.6713,
+      "AG_gspphot_16_84": [
+        2.6622,
+        2.68
+      ],
+      "AG_msc": 0.0018,
+      "AG_msc_16_84": [
+        0.0,
+        0.0347
+      ],
+      "TGE_a0": 1.4664,
+      "AG_max_current_max_GSP_TGE": 2.6713,
+      "AG_max_variant_max_MSC_TGE": 1.4664,
+      "AG_max_changed": true,
+      "final_label_current": "判定保留",
+      "photometric_margin_current": -2.06,
+      "photometric_margin_variant": -0.86,
+      "photo_axis_current": "排除できない",
+      "M_G0_variant": 6.94,
+      "M1_range_current": [
+        0.48,
+        1.14
+      ],
+      "supplementary_M1_high_if_MSC_used_for_M1_correction": 0.78,
+      "supplementary_note": "現行の M1 範囲は GSP-Phot の A_G で補正しており A_G,max の変種では変わらない。これは定義外の参考値。"
+    },
+    {
+      "num": 13,
+      "source_id": "4375290679157690368",
+      "AG_gspphot": 0.5131,
+      "AG_gspphot_16_84": [
+        0.507,
+        0.5223
+      ],
+      "AG_msc": 0.6743,
+      "AG_msc_16_84": [
+        0.0,
+        1.0481
+      ],
+      "TGE_a0": 0.929,
+      "AG_max_current_max_GSP_TGE": 0.929,
+      "AG_max_variant_max_MSC_TGE": 0.929,
+      "AG_max_changed": false,
+      "final_label_current": "BH非支持（測光軸: 排除できない（M_G,0<2））",
+      "photometric_margin_current": -8.34,
+      "photometric_margin_variant": -8.34,
+      "photo_axis_current": "排除できない",
+      "M_G0_variant": -0.24,
+      "M1_range_current": [
+        1.0,
+        3.45
+      ]
+    }
+  ],
+  "conclusion": {
+    "changed_objects": [
+      12
+    ],
+    "BH1_margin": "不変（両変種とも TGE a0 = 1.4387 が支配的で余裕 6.65 等のまま）",
+    "M1_range": "全件不変（M1 範囲は A_G,max ではなく GSP-Phot A_G で構築されているため）",
+    "labels": "ラベル変更なし（#12 の余裕は −2.06 → −0.86 と変わるが 1 等の要求には届かず測光軸は『排除できない』のまま。#12 の最終ラベル『判定保留』は質量軸で決まっており不変）"
+  }
+}
