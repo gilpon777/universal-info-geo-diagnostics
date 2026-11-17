@@ -1,0 +1,152 @@
+#!/usr/bin/env python3
+"""DR4 判定規則（統合規則・案）の参照実装とテストベクトル。
+作成: 2026-11-17（Claude）/ 状態: 追記8の案（凍結前）。
+入力: 各天体の f 区間・M1 範囲・M_G・減光（GSP-Phot, TGE）・色の旗・軌道解の種類。
+出力: 質量軸 / 測光軸 / 最終ラベルと理由。標準ライブラリ＋numpy のみ。
+実行: python3 dr4_apply_rules.py  → dr4_test_vectors.json を書き出し、全ケースが期待どおりなら status: OK。
+規則の出典（追記番号）はコメントに示す。★は本案での新規または明確化（採否は Muse・ChatGPT・中谷さんの確認が必要）。
+"""
+import json, sys
+import numpy as np
+
+# --- 主系列の M_G(M) アンカー（dr4_beta_scan3.py と同一。0.6 未満は追記5の Pecaut & Mamajek 追加分）---
+ANCH_M = [0.10,0.12,0.15,0.20,0.25,0.30,0.40,0.50,0.60,0.80,1.0,1.3,1.6,2.2,3.0,4.0,5.5,8.0,10.0,15.0,20.0,30.0]
+ANCH_G = [14.26,13.35,12.6519,11.6832,11.0332,10.5958,9.67,8.82,8.1,6.4,4.83,3.7,2.7,0.6,-0.1,-1.0,-1.7,-2.5,-3.0,-4.0,-4.9,-5.7]
+M3_REF = 3.0  # BH 候補/非支持の境界質量 [M☉]（追記1 §2.3）
+
+def mg_ms(m):
+    """主系列星の M_G。下側の範囲外は例外（端値固定の欠陥を再発させない）。上側の範囲外は端値（保守的：実際はより明るい）。"""
+    if m < ANCH_M[0]:
+        raise ValueError(f"M={m} は低質量アンカー {ANCH_M[0]} 未満")
+    m = min(m, ANCH_M[-1])
+    return float(np.interp(np.log10(m), np.log10(ANCH_M), ANCH_G))
+
+def m2_from_f(f, m1):
+    """f = M2^3/(M1+M2)^2 の逆変換（M2 について単調増加）。"""
+    lo, hi = 1e-9, 1e4
+    for _ in range(200):
+        mid = 0.5*(lo+hi)
+        if mid**3/(m1+mid)**2 < f: lo = mid
+        else: hi = mid
+    return 0.5*(lo+hi)
+
+# --- 閾値（追記2〜3 の条文。★は本案）---
+MARGIN_CAND_MAG   = 1.0   # 追記2 §1: 候補側の測光余裕
+MG0_MIN_CAND      = 2.0   # 追記2 §3: M_G,0 < 2 は候補ラベルを付けない
+FLIP_MARGIN_MIN   = 1.5   # ★ 非支持側の光度天井の余裕（本案。アンカー概略±0.5 + 余裕1.0）
+FLAG_WEAK, FLAG_ATT, FLAG_BAD = 0.15, 0.30, 0.60  # 色の旗: 追記3 §5（0.15/0.30）。0.60 は「不適」の実務境界（★明確化）
+
+def colour_flag(dc):
+    a = abs(dc)
+    if a >= FLAG_BAD and dc > 0: return "不適"
+    if a > FLAG_ATT: return "要注意"
+    if a >= FLAG_WEAK: return "弱い注意"
+    return "なし"
+
+def label(o):
+    """o: dict。返り値: dict(mass_axis, phot_axis, label, reasons, margins)。"""
+    R = []
+    if o.get("match","A") == "D":
+        return dict(mass_axis="対象外", phot_axis="対象外", label="対応不明", reasons=["対応 D（確認できない）"], margins={})
+    if not o.get("has_orbit", True):
+        return dict(mass_axis="対象外", phot_axis="対象外", label="軌道解なし", reasons=["軌道解が無い"], margins={})
+    flo, fhi = o["f95"]; m1lo, m1hi = o["M1_range"]
+    sb1 = (o.get("solution","astrometric") == "spectroscopic_SB1")
+    # 質量軸（追記3 §1, §3）。M2 下限は M1 下端、上限は M1 上端で評価
+    m2lo = m2_from_f(flo, m1lo)
+    m2hi = None if sb1 else m2_from_f(fhi, m1hi)       # SB1 は sin i 未知のため上限なし（追記3 §3）
+    if m2lo > M3_REF: mass = "支持"
+    elif (m2hi is not None) and m2hi < M3_REF: mass = "非支持"
+    else: mass = "保留"
+    # 減光の天井（追記3 §2）
+    ag = [a for a in (o.get("A_G_gsp"), o.get("A_G_tge")) if a is not None]
+    agmax = max(ag)
+    MG = o["M_G"]; MG0 = o["M_G_corr"]
+    margin_c = (MG - agmax) - mg_ms(m2lo) if m2lo >= ANCH_M[0] else float("nan")
+    flip = (MG - agmax) - mg_ms(M3_REF)                # ★ 光度天井: 系が M2=3 M☉ の主系列星より何等暗いか
+    flag = colour_flag(o["dcolour"]) if "dcolour" in o else "なし"
+    margins = dict(A_G_max=round(agmax,4), margin_cand=round(margin_c,2), flip_margin=round(flip,2), M2_lo=round(m2lo,3), M2_hi=None if m2hi is None else round(m2hi,3), colour_flag=flag)
+    # 光度条件
+    if mass == "支持":
+        phot = "排除済み" if (margin_c >= MARGIN_CAND_MAG and MG0 >= MG0_MIN_CAND) else "排除できない"
+        if phot == "排除済み": lab = "BH候補"; R.append(f"M2下限 {m2lo:.2f} > 3、測光余裕 {margin_c:.2f} ≥ {MARGIN_CAND_MAG}、M_G,0 {MG0} ≥ {MG0_MIN_CAND}")
+        else: lab = "判定不能（測光）"; R.append(f"M2下限 {m2lo:.2f} > 3 だが測光余裕 {margin_c:.2f} / M_G,0 {MG0} が条件未達")
+        if flag in ("要注意","不適"): R.append(f"色の旗 {flag}（記録のみ。候補側には適用しない）")
+    elif mass == "非支持":
+        phot = "光度天井で確認" if flip >= FLIP_MARGIN_MIN else "光度天井が不足"
+        if flip < FLIP_MARGIN_MIN:
+            lab = "判定保留"; R.append(f"M2上限 {m2hi:.2f} < 3 だが光度天井の余裕 {flip:.2f} < {FLIP_MARGIN_MIN}（M2>3 の主系列伴星を排除できない）")
+        elif flag in ("要注意","不適"):
+            lab = "判定保留"; R.append(f"M2上限 {m2hi:.2f} < 3、光度余裕 {flip:.2f} は十分だが、色の旗 {flag}（主系列前提が弱い。追記6 §3）")
+        else:
+            lab = "BH非支持"; R.append(f"M2上限 {m2hi:.2f} < 3、光度天井の余裕 {flip:.2f} ≥ {FLIP_MARGIN_MIN}、色の旗 {flag}")
+    else:
+        phot = "対象外"; lab = "判定保留"
+        R.append("M2区間が 3 をまたぐ" if m2hi is not None else "M2 の上限が原理的に定まらない（SB1：傾斜角未確定）")
+    # 凍結区間との不整合（追記1 ⑤）
+    fz = o.get("f95_frozen")
+    if fz and (flo > fz[1] or fhi < fz[0]):
+        lab = "判定保留"; R.append("DR4 区間が凍結区間と重ならない：対応付けと解の種類を再確認し、説明が付くまでラベルを動かさない（追記1 ⑤）")
+    return dict(mass_axis=mass, phot_axis=phot, label=lab, reasons=R, margins=margins)
+
+# --- 13 天体の入力（dr4_m1m2_table_v3 と gaia_extinction_bracket_13 から転記）---
+TGE = {1:1.1139,2:1.0468,3:1.0608,4:0.9811,5:1.1048,6:1.4387,7:1.1139,8:1.2589,9:1.4664,10:1.0004,11:0.9811,12:1.4664,13:0.929}
+GSP = {1:None,2:0.207,3:0.5942,4:0.4042,5:0.5465,6:0.5575,7:0.5238,8:None,9:0.3036,10:None,11:0.615,12:2.6713,13:0.5131}
+ROWS = {  # num: (M_G, M_G_corr, dcolour, M1_range, f95(frozen main), solution)
+ 1:(6.94,6.94,0.39,[0.58,0.95],None,None), 2:(6.17,5.96,0.05,[0.66,1.11],None,None), 3:(6.10,5.51,0.03,[0.67,1.18],None,None),
+ 4:(3.61,3.21,0.24,[1.06,1.87],[0.05233166499420931,0.09913539779506524],"astrometric"),
+ 5:(2.89,2.34,0.38,[1.23,2.2],None,None),
+ 6:(5.35,4.79,0.13,[0.74,1.31],[7.58,18.14],"astrometric"),
+ 7:(4.79,4.27,0.23,[0.81,1.48],[0.03591066662087977,0.06671779870462954],"astrometric"),
+ 8:(6.46,6.46,0.42,[0.63,1.03],[0.024709736466311003,0.0766031920234604],"astrometric"),
+ 9:(4.32,4.02,0.12,[0.9,1.57],[0.014168281215786137,0.024917291774521833],"astrometric"),
+ 10:(5.08,5.08,0.19,[0.77,1.25],[5.496613959429415e-05,0.00021338160352113884],"spectroscopic_SB1"),
+ 11:(5.28,4.67,0.21,[0.75,1.35],None,None),
+ 12:(8.41,5.74,-0.32,[0.48,0.95],[0.078,90.3],"astrometric"),   # M1 範囲は追記7（A_G=TGE で再計算）
+ 13:(0.69,0.18,1.01,[1.0,3.45],[0.04255985715166325,0.07198666889242408],"astrometric")}  # 和集合（追記3 §5）
+EXPECT = {1:"軌道解なし",2:"軌道解なし",3:"軌道解なし",4:"BH非支持",5:"軌道解なし",6:"BH候補",7:"BH非支持",8:"判定保留",9:"BH非支持",10:"判定保留",11:"軌道解なし",12:"判定保留",13:"判定保留"}
+
+def build(num):
+    MG,MG0,dc,m1,f95,sol = ROWS[num]
+    return dict(num=num, has_orbit=f95 is not None, solution=sol or "none", f95=f95, M1_range=m1, M_G=MG, M_G_corr=MG0,
+                A_G_gsp=GSP[num], A_G_tge=TGE[num], dcolour=dc)
+
+# --- 合成テストベクトル（DR4 を想定した分岐の網羅用。予測ではない）---
+SYN = [
+ dict(id="S1", note="BH1 が精度向上して区間が狭まる", num=6, over=dict(f95=[9.0,12.0]), expect="BH候補"),
+ dict(id="S2", note="#12 が高い f に絞られる（候補側。色の旗は記録のみ）", num=12, over=dict(f95=[6.0,15.0]), expect="BH候補"),
+ dict(id="S3", note="#12 が低い f に絞られる（非支持。色の旗 要注意 のため保留）", num=12, over=dict(f95=[0.06,0.12]), expect="判定保留"),
+ dict(id="S4", note="#9 が精度向上して f が小さいまま（非支持を維持）", num=9, over=dict(f95=[0.016,0.023]), expect="BH非支持"),
+ dict(id="S5", note="M2 区間が 3 をまたぐ（保留）", num=4, over=dict(f95=[1.2,2.0]), expect="判定保留"),
+ dict(id="S6", note="SB1 で M2 の最小質量が 3 を超える（下限のみ。傾斜角未確定でも支持側は成立）", num=10, over=dict(f95=[6.0,9.0], M_G=9.0, M_G_corr=9.0), expect="BH候補"),
+ dict(id="S7", note="SB1 で f が小さい（上限が無いため非支持にしない）", num=10, over=dict(f95=[1e-4,2e-4]), expect="判定保留"),
+ dict(id="S8", note="支持だが系の M_G,0 < 2（測光で判定不能）", num=6, over=dict(f95=[9.0,12.0], M_G=1.5, M_G_corr=1.2), expect="判定不能（測光）"),
+ dict(id="S9", note="非支持だが光度天井の余裕が不足（#13 型）", num=4, over=dict(M_G=1.8, M_G_corr=1.5, dcolour=0.1), expect="判定保留"),
+ dict(id="S10", note="対応 D", num=6, over=dict(match="D"), expect="対応不明"),
+ dict(id="S11", note="DR4 区間が凍結区間の上に外れる（⑤：説明が付くまで保留）", num=6, over=dict(f95=[22.0,30.0], f95_frozen=[7.58,18.14]), expect="判定保留"),
+ dict(id="S12", note="軌道解なし", num=1, over=dict(), expect="軌道解なし"),
+]
+
+def main():
+    out = dict(real=[], synthetic=[], status="OK")
+    for n in range(1,14):
+        o = build(n); r = label(o); ok = (r["label"] == EXPECT[n])
+        out["real"].append(dict(num=n, input=o, output=r, expected=EXPECT[n], pass_=ok))
+        if not ok: out["status"] = "FAIL"
+    for s in SYN:
+        o = build(s["num"]); o.update(s["over"])
+        if "f95" in s["over"]: o["has_orbit"] = True
+        r = label(o); ok = (r["label"] == s["expect"])
+        out["synthetic"].append(dict(id=s["id"], note=s["note"], input=o, output=r, expected=s["expect"], pass_=ok))
+        if not ok: out["status"] = "FAIL"
+    json.dump(out, open("dr4_test_vectors.json","w"), ensure_ascii=False, indent=1, default=float)
+    print("status:", out["status"])
+    for r in out["real"]:
+        m = r["output"]["margins"]
+        print(f'#{r["num"]:<2d} {r["output"]["label"]:<14s} mass={r["output"]["mass_axis"]:<6s} phot={r["output"]["phot_axis"]:<10s} {m}')
+    for s in out["synthetic"]:
+        print(s["id"], s["output"]["label"], "OK" if s["pass_"] else "FAIL", "-", s["note"])
+    return 0 if out["status"]=="OK" else 1
+
+if __name__ == "__main__":
+    sys.exit(main())
