@@ -1,0 +1,1587 @@
+{
+ "real": [
+  {
+   "num": 1,
+   "input": {
+    "num": 1,
+    "match": "A",
+    "has_orbit": false,
+    "solution": "none",
+    "f95": null,
+    "M1_range": [
+     0.58,
+     0.95
+    ],
+    "M_G": 6.94,
+    "M_G_corr": 6.94,
+    "A_G_gsp": null,
+    "A_G_tge": 1.1139,
+    "dcolour": 0.39
+   },
+   "output": {
+    "mass_axis": "対象外",
+    "phot_axis": "対象外",
+    "label": "軌道解なし",
+    "reasons": [
+     "軌道解が無い"
+    ],
+    "margins": {}
+   },
+   "expected": "軌道解なし",
+   "pass_": true
+  },
+  {
+   "num": 2,
+   "input": {
+    "num": 2,
+    "match": "A",
+    "has_orbit": false,
+    "solution": "none",
+    "f95": null,
+    "M1_range": [
+     0.66,
+     1.11
+    ],
+    "M_G": 6.17,
+    "M_G_corr": 5.96,
+    "A_G_gsp": 0.207,
+    "A_G_tge": 1.0468,
+    "dcolour": 0.05
+   },
+   "output": {
+    "mass_axis": "対象外",
+    "phot_axis": "対象外",
+    "label": "軌道解なし",
+    "reasons": [
+     "軌道解が無い"
+    ],
+    "margins": {}
+   },
+   "expected": "軌道解なし",
+   "pass_": true
+  },
+  {
+   "num": 3,
+   "input": {
+    "num": 3,
+    "match": "A",
+    "has_orbit": false,
+    "solution": "none",
+    "f95": null,
+    "M1_range": [
+     0.67,
+     1.18
+    ],
+    "M_G": 6.1,
+    "M_G_corr": 5.51,
+    "A_G_gsp": 0.5942,
+    "A_G_tge": 1.0608,
+    "dcolour": 0.03
+   },
+   "output": {
+    "mass_axis": "対象外",
+    "phot_axis": "対象外",
+    "label": "軌道解なし",
+    "reasons": [
+     "軌道解が無い"
+    ],
+    "margins": {}
+   },
+   "expected": "軌道解なし",
+   "pass_": true
+  },
+  {
+   "num": 4,
+   "input": {
+    "num": 4,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.05233166499420931,
+     0.09913539779506524
+    ],
+    "M1_range": [
+     1.06,
+     1.87
+    ],
+    "M_G": 3.61,
+    "M_G_corr": 3.21,
+    "A_G_gsp": 0.4042,
+    "A_G_tge": 0.9811,
+    "dcolour": 0.24
+   },
+   "output": {
+    "mass_axis": "非支持",
+    "phot_axis": "光度天井で確認",
+    "label": "BH非支持",
+    "reasons": [
+     "M2上限 0.92 < 3、光度天井の余裕 2.33 ≥ 1.5、色の旗 弱い注意"
+    ],
+    "margins": {
+     "A_G_max": 0.9811,
+     "margin_cand": -6.16,
+     "flip_margin": 2.33,
+     "M2_lo": 0.504,
+     "M2_hi": 0.916,
+     "colour_flag": "弱い注意"
+    }
+   },
+   "expected": "BH非支持",
+   "pass_": true
+  },
+  {
+   "num": 5,
+   "input": {
+    "num": 5,
+    "match": "A",
+    "has_orbit": false,
+    "solution": "none",
+    "f95": null,
+    "M1_range": [
+     1.23,
+     2.2
+    ],
+    "M_G": 2.89,
+    "M_G_corr": 2.34,
+    "A_G_gsp": 0.5465,
+    "A_G_tge": 1.1048,
+    "dcolour": 0.38
+   },
+   "output": {
+    "mass_axis": "対象外",
+    "phot_axis": "対象外",
+    "label": "軌道解なし",
+    "reasons": [
+     "軌道解が無い"
+    ],
+    "margins": {}
+   },
+   "expected": "軌道解なし",
+   "pass_": true
+  },
+  {
+   "num": 6,
+   "input": {
+    "num": 6,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     7.58,
+     18.14
+    ],
+    "M1_range": [
+     0.74,
+     1.31
+    ],
+    "M_G": 5.35,
+    "M_G_corr": 4.79,
+    "A_G_gsp": 0.5575,
+    "A_G_tge": 1.4387,
+    "dcolour": 0.13
+   },
+   "output": {
+    "mass_axis": "支持",
+    "phot_axis": "排除済み",
+    "label": "BH候補",
+    "reasons": [
+     "M2下限 8.89 > 3、測光余裕 6.65 ≥ 1.0、M_G,0 4.79 ≥ 2.0"
+    ],
+    "margins": {
+     "A_G_max": 1.4387,
+     "margin_cand": 6.65,
+     "flip_margin": 3.61,
+     "M2_lo": 8.894,
+     "M2_hi": 20.529,
+     "colour_flag": "なし"
+    }
+   },
+   "expected": "BH候補",
+   "pass_": true
+  },
+  {
+   "num": 7,
+   "input": {
+    "num": 7,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.03591066662087977,
+     0.06671779870462954
+    ],
+    "M1_range": [
+     0.81,
+     1.48
+    ],
+    "M_G": 4.79,
+    "M_G_corr": 4.27,
+    "A_G_gsp": 0.5238,
+    "A_G_tge": 1.1139,
+    "dcolour": 0.23
+   },
+   "output": {
+    "mass_axis": "非支持",
+    "phot_axis": "光度天井で確認",
+    "label": "BH非支持",
+    "reasons": [
+     "M2上限 0.68 < 3、光度天井の余裕 3.38 ≥ 1.5、色の旗 弱い注意"
+    ],
+    "margins": {
+     "A_G_max": 1.1139,
+     "margin_cand": -6.26,
+     "flip_margin": 3.38,
+     "M2_lo": 0.368,
+     "M2_hi": 0.677,
+     "colour_flag": "弱い注意"
+    }
+   },
+   "expected": "BH非支持",
+   "pass_": true
+  },
+  {
+   "num": 8,
+   "input": {
+    "num": 8,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.024709736466311003,
+     0.0766031920234604
+    ],
+    "M1_range": [
+     0.63,
+     1.03
+    ],
+    "M_G": 6.46,
+    "M_G_corr": 6.46,
+    "A_G_gsp": null,
+    "A_G_tge": 1.2589,
+    "dcolour": 0.42
+   },
+   "output": {
+    "mass_axis": "非支持",
+    "phot_axis": "光度天井で確認",
+    "label": "判定保留",
+    "reasons": [
+     "M2上限 0.58 < 3、光度余裕 4.90 は十分だが、色の旗 要注意（主系列前提が弱い。追記6 §3）"
+    ],
+    "margins": {
+     "A_G_max": 1.2589,
+     "margin_cand": -5.63,
+     "flip_margin": 4.9,
+     "M2_lo": 0.272,
+     "M2_hi": 0.584,
+     "colour_flag": "要注意"
+    }
+   },
+   "expected": "判定保留",
+   "pass_": true
+  },
+  {
+   "num": 9,
+   "input": {
+    "num": 9,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.014168281215786137,
+     0.024917291774521833
+    ],
+    "M1_range": [
+     0.9,
+     1.57
+    ],
+    "M_G": 4.32,
+    "M_G_corr": 4.02,
+    "A_G_gsp": 0.3036,
+    "A_G_tge": 1.4664,
+    "dcolour": 0.12
+   },
+   "output": {
+    "mass_axis": "非支持",
+    "phot_axis": "光度天井で確認",
+    "label": "BH非支持",
+    "reasons": [
+     "M2上限 0.47 < 3、光度天井の余裕 2.55 ≥ 1.5、色の旗 なし"
+    ],
+    "margins": {
+     "A_G_max": 1.4664,
+     "margin_cand": -8.01,
+     "flip_margin": 2.55,
+     "M2_lo": 0.268,
+     "M2_hi": 0.47,
+     "colour_flag": "なし"
+    }
+   },
+   "expected": "BH非支持",
+   "pass_": true
+  },
+  {
+   "num": 10,
+   "input": {
+    "num": 10,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "spectroscopic_SB1",
+    "f95": [
+     5.496613959429415e-05,
+     0.00021338160352113884
+    ],
+    "M1_range": [
+     0.77,
+     1.25
+    ],
+    "M_G": 5.08,
+    "M_G_corr": 5.08,
+    "A_G_gsp": null,
+    "A_G_tge": 1.0004,
+    "dcolour": 0.19
+   },
+   "output": {
+    "mass_axis": "保留",
+    "phot_axis": "対象外",
+    "label": "判定保留",
+    "reasons": [
+     "M2 の上限が原理的に定まらない（SB1：傾斜角未確定）"
+    ],
+    "margins": {
+     "A_G_max": 1.0004,
+     "margin_cand": NaN,
+     "flip_margin": 3.78,
+     "M2_lo": 0.033,
+     "M2_hi": null,
+     "colour_flag": "弱い注意"
+    }
+   },
+   "expected": "判定保留",
+   "pass_": true
+  },
+  {
+   "num": 11,
+   "input": {
+    "num": 11,
+    "match": "A",
+    "has_orbit": false,
+    "solution": "none",
+    "f95": null,
+    "M1_range": [
+     0.75,
+     1.35
+    ],
+    "M_G": 5.28,
+    "M_G_corr": 4.67,
+    "A_G_gsp": 0.615,
+    "A_G_tge": 0.9811,
+    "dcolour": 0.21
+   },
+   "output": {
+    "mass_axis": "対象外",
+    "phot_axis": "対象外",
+    "label": "軌道解なし",
+    "reasons": [
+     "軌道解が無い"
+    ],
+    "margins": {}
+   },
+   "expected": "軌道解なし",
+   "pass_": true
+  },
+  {
+   "num": 12,
+   "input": {
+    "num": 12,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.078,
+     90.3
+    ],
+    "M1_range": [
+     0.48,
+     0.95
+    ],
+    "M_G": 8.41,
+    "M_G_corr": 5.74,
+    "A_G_gsp": 2.6713,
+    "A_G_tge": 1.4664,
+    "dcolour": -0.32
+   },
+   "output": {
+    "mass_axis": "保留",
+    "phot_axis": "対象外",
+    "label": "判定保留",
+    "reasons": [
+     "M2区間が 3 をまたぐ"
+    ],
+    "margins": {
+     "A_G_max": 2.6713,
+     "margin_cand": -4.02,
+     "flip_margin": 5.44,
+     "M2_lo": 0.389,
+     "M2_hi": 92.171,
+     "colour_flag": "要注意"
+    }
+   },
+   "expected": "判定保留",
+   "pass_": true
+  },
+  {
+   "num": 13,
+   "input": {
+    "num": 13,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.04255985715166325,
+     0.07198666889242408
+    ],
+    "M1_range": [
+     1.0,
+     3.45
+    ],
+    "M_G": 0.69,
+    "M_G_corr": 0.18,
+    "A_G_gsp": 0.5131,
+    "A_G_tge": 0.929,
+    "dcolour": 1.01
+   },
+   "output": {
+    "mass_axis": "非支持",
+    "phot_axis": "光度天井が不足",
+    "label": "判定保留",
+    "reasons": [
+     "M2上限 1.15 < 3 だが光度天井の余裕 -0.54 < 1.5（M2>3 の主系列伴星を排除できない）"
+    ],
+    "margins": {
+     "A_G_max": 0.929,
+     "margin_cand": -9.49,
+     "flip_margin": -0.54,
+     "M2_lo": 0.447,
+     "M2_hi": 1.151,
+     "colour_flag": "不適"
+    }
+   },
+   "expected": "判定保留",
+   "pass_": true
+  }
+ ],
+ "synthetic": [
+  {
+   "id": "S1",
+   "note": "BH1 が精度向上して区間が狭まる",
+   "input": {
+    "num": 6,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     9.0,
+     12.0
+    ],
+    "M1_range": [
+     0.74,
+     1.31
+    ],
+    "M_G": 5.35,
+    "M_G_corr": 4.79,
+    "A_G_gsp": 0.5575,
+    "A_G_tge": 1.4387,
+    "dcolour": 0.13
+   },
+   "output": {
+    "mass_axis": "支持",
+    "phot_axis": "排除済み",
+    "label": "BH候補",
+    "reasons": [
+     "M2下限 10.33 > 3、測光余裕 6.99 ≥ 1.0、M_G,0 4.79 ≥ 2.0"
+    ],
+    "margins": {
+     "A_G_max": 1.4387,
+     "margin_cand": 6.99,
+     "flip_margin": 3.61,
+     "M2_lo": 10.335,
+     "M2_hi": 14.299,
+     "colour_flag": "なし"
+    }
+   },
+   "expected": "BH候補",
+   "pass_": true
+  },
+  {
+   "id": "S2",
+   "note": "#12 が高い f に絞られる（候補側。色の旗は記録のみ）",
+   "input": {
+    "num": 12,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     6.0,
+     15.0
+    ],
+    "M1_range": [
+     0.48,
+     0.95
+    ],
+    "M_G": 8.41,
+    "M_G_corr": 5.74,
+    "A_G_gsp": 2.6713,
+    "A_G_tge": 1.4664,
+    "dcolour": -0.32
+   },
+   "output": {
+    "mass_axis": "支持",
+    "phot_axis": "排除済み",
+    "label": "BH候補",
+    "reasons": [
+     "M2下限 6.87 > 3、測光余裕 7.91 ≥ 1.0、M_G,0 5.74 ≥ 2.0",
+     "色の旗 要注意（記録のみ。候補側には適用しない）"
+    ],
+    "margins": {
+     "A_G_max": 2.6713,
+     "margin_cand": 7.91,
+     "flip_margin": 5.44,
+     "M2_lo": 6.868,
+     "M2_hi": 16.75,
+     "colour_flag": "要注意"
+    }
+   },
+   "expected": "BH候補",
+   "pass_": true
+  },
+  {
+   "id": "S3",
+   "note": "#12 が低い f に絞られる（非支持。色の旗 要注意 のため保留）",
+   "input": {
+    "num": 12,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.06,
+     0.12
+    ],
+    "M1_range": [
+     0.48,
+     0.95
+    ],
+    "M_G": 8.41,
+    "M_G_corr": 5.74,
+    "A_G_gsp": 2.6713,
+    "A_G_tge": 1.4664,
+    "dcolour": -0.32
+   },
+   "output": {
+    "mass_axis": "非支持",
+    "phot_axis": "光度天井で確認",
+    "label": "判定保留",
+    "reasons": [
+     "M2上限 0.68 < 3、光度余裕 5.44 は十分だが、色の旗 要注意（主系列前提が弱い。追記6 §3）"
+    ],
+    "margins": {
+     "A_G_max": 2.6713,
+     "margin_cand": -4.42,
+     "flip_margin": 5.44,
+     "M2_lo": 0.344,
+     "M2_hi": 0.684,
+     "colour_flag": "要注意"
+    }
+   },
+   "expected": "判定保留",
+   "pass_": true
+  },
+  {
+   "id": "S4",
+   "note": "#9 が精度向上して f が小さいまま（非支持を維持）",
+   "input": {
+    "num": 9,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.016,
+     0.023
+    ],
+    "M1_range": [
+     0.9,
+     1.57
+    ],
+    "M_G": 4.32,
+    "M_G_corr": 4.02,
+    "A_G_gsp": 0.3036,
+    "A_G_tge": 1.4664,
+    "dcolour": 0.12
+   },
+   "output": {
+    "mass_axis": "非支持",
+    "phot_axis": "光度天井で確認",
+    "label": "BH非支持",
+    "reasons": [
+     "M2上限 0.46 < 3、光度天井の余裕 2.55 ≥ 1.5、色の旗 なし"
+    ],
+    "margins": {
+     "A_G_max": 1.4664,
+     "margin_cand": -7.89,
+     "flip_margin": 2.55,
+     "M2_lo": 0.282,
+     "M2_hi": 0.455,
+     "colour_flag": "なし"
+    }
+   },
+   "expected": "BH非支持",
+   "pass_": true
+  },
+  {
+   "id": "S5",
+   "note": "M2 区間が 3 をまたぐ（保留）",
+   "input": {
+    "num": 4,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     1.2,
+     2.0
+    ],
+    "M1_range": [
+     1.06,
+     1.87
+    ],
+    "M_G": 3.61,
+    "M_G_corr": 3.21,
+    "A_G_gsp": 0.4042,
+    "A_G_tge": 0.9811,
+    "dcolour": 0.24
+   },
+   "output": {
+    "mass_axis": "保留",
+    "phot_axis": "対象外",
+    "label": "判定保留",
+    "reasons": [
+     "M2区間が 3 をまたぐ"
+    ],
+    "margins": {
+     "A_G_max": 0.9811,
+     "margin_cand": 2.14,
+     "flip_margin": 2.33,
+     "M2_lo": 2.458,
+     "M2_hi": 4.186,
+     "colour_flag": "弱い注意"
+    }
+   },
+   "expected": "判定保留",
+   "pass_": true
+  },
+  {
+   "id": "S6",
+   "note": "SB1 で M2 の最小質量が 3 を超える（下限のみ。傾斜角未確定でも支持側は成立）",
+   "input": {
+    "num": 10,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "spectroscopic_SB1",
+    "f95": [
+     6.0,
+     9.0
+    ],
+    "M1_range": [
+     0.77,
+     1.25
+    ],
+    "M_G": 9.0,
+    "M_G_corr": 9.0,
+    "A_G_gsp": null,
+    "A_G_tge": 1.0004,
+    "dcolour": 0.19
+   },
+   "output": {
+    "mass_axis": "支持",
+    "phot_axis": "排除済み",
+    "label": "BH候補",
+    "reasons": [
+     "M2下限 7.33 > 3、測光余裕 10.31 ≥ 1.0、M_G,0 9.0 ≥ 2.0"
+    ],
+    "margins": {
+     "A_G_max": 1.0004,
+     "margin_cand": 10.31,
+     "flip_margin": 7.7,
+     "M2_lo": 7.327,
+     "M2_hi": null,
+     "colour_flag": "弱い注意"
+    }
+   },
+   "expected": "BH候補",
+   "pass_": true
+  },
+  {
+   "id": "S7",
+   "note": "SB1 で f が小さい（上限が無いため非支持にしない）",
+   "input": {
+    "num": 10,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "spectroscopic_SB1",
+    "f95": [
+     0.0001,
+     0.0002
+    ],
+    "M1_range": [
+     0.77,
+     1.25
+    ],
+    "M_G": 5.08,
+    "M_G_corr": 5.08,
+    "A_G_gsp": null,
+    "A_G_tge": 1.0004,
+    "dcolour": 0.19
+   },
+   "output": {
+    "mass_axis": "保留",
+    "phot_axis": "対象外",
+    "label": "判定保留",
+    "reasons": [
+     "M2 の上限が原理的に定まらない（SB1：傾斜角未確定）"
+    ],
+    "margins": {
+     "A_G_max": 1.0004,
+     "margin_cand": NaN,
+     "flip_margin": 3.78,
+     "M2_lo": 0.04,
+     "M2_hi": null,
+     "colour_flag": "弱い注意"
+    }
+   },
+   "expected": "判定保留",
+   "pass_": true
+  },
+  {
+   "id": "S8",
+   "note": "支持だが系の M_G,0 < 2（測光で判定不能）",
+   "input": {
+    "num": 6,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     9.0,
+     12.0
+    ],
+    "M1_range": [
+     0.74,
+     1.31
+    ],
+    "M_G": 1.5,
+    "M_G_corr": 1.2,
+    "A_G_gsp": 0.5575,
+    "A_G_tge": 1.4387,
+    "dcolour": 0.13
+   },
+   "output": {
+    "mass_axis": "支持",
+    "phot_axis": "排除できない",
+    "label": "判定不能（測光）",
+    "reasons": [
+     "M2下限 10.33 > 3 だが測光余裕 3.14 / M_G,0 1.2 が条件未達"
+    ],
+    "margins": {
+     "A_G_max": 1.4387,
+     "margin_cand": 3.14,
+     "flip_margin": -0.24,
+     "M2_lo": 10.335,
+     "M2_hi": 14.299,
+     "colour_flag": "なし"
+    }
+   },
+   "expected": "判定不能（測光）",
+   "pass_": true
+  },
+  {
+   "id": "S9",
+   "note": "非支持だが光度天井の余裕が不足（#13 型）",
+   "input": {
+    "num": 4,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.05233166499420931,
+     0.09913539779506524
+    ],
+    "M1_range": [
+     1.06,
+     1.87
+    ],
+    "M_G": 1.8,
+    "M_G_corr": 1.5,
+    "A_G_gsp": 0.4042,
+    "A_G_tge": 0.9811,
+    "dcolour": 0.1
+   },
+   "output": {
+    "mass_axis": "非支持",
+    "phot_axis": "光度天井が不足",
+    "label": "判定保留",
+    "reasons": [
+     "M2上限 0.92 < 3 だが光度天井の余裕 0.52 < 1.5（M2>3 の主系列伴星を排除できない）"
+    ],
+    "margins": {
+     "A_G_max": 0.9811,
+     "margin_cand": -7.97,
+     "flip_margin": 0.52,
+     "M2_lo": 0.504,
+     "M2_hi": 0.916,
+     "colour_flag": "なし"
+    }
+   },
+   "expected": "判定保留",
+   "pass_": true
+  },
+  {
+   "id": "S10",
+   "note": "対応 D",
+   "input": {
+    "num": 6,
+    "match": "D",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     7.58,
+     18.14
+    ],
+    "M1_range": [
+     0.74,
+     1.31
+    ],
+    "M_G": 5.35,
+    "M_G_corr": 4.79,
+    "A_G_gsp": 0.5575,
+    "A_G_tge": 1.4387,
+    "dcolour": 0.13
+   },
+   "output": {
+    "mass_axis": "対象外",
+    "phot_axis": "対象外",
+    "label": "対応不明",
+    "reasons": [
+     "対応 D（確認できない）"
+    ],
+    "margins": {}
+   },
+   "expected": "対応不明",
+   "pass_": true
+  },
+  {
+   "id": "S11",
+   "note": "DR4 区間が凍結区間の上に外れる（⑤：説明が付くまで保留）",
+   "input": {
+    "num": 6,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     22.0,
+     30.0
+    ],
+    "M1_range": [
+     0.74,
+     1.31
+    ],
+    "M_G": 5.35,
+    "M_G_corr": 4.79,
+    "A_G_gsp": 0.5575,
+    "A_G_tge": 1.4387,
+    "dcolour": 0.13,
+    "f95_frozen": [
+     7.58,
+     18.14
+    ]
+   },
+   "output": {
+    "mass_axis": "支持",
+    "phot_axis": "排除済み",
+    "label": "判定保留",
+    "reasons": [
+     "M2下限 23.41 > 3、測光余裕 9.12 ≥ 1.0、M_G,0 4.79 ≥ 2.0",
+     "DR4 区間が凍結区間と重ならない：対応付けと解の種類を再確認し、説明が付くまでラベルを動かさない（追記1 ⑤）"
+    ],
+    "margins": {
+     "A_G_max": 1.4387,
+     "margin_cand": 9.12,
+     "flip_margin": 3.61,
+     "M2_lo": 23.413,
+     "M2_hi": 32.47,
+     "colour_flag": "なし"
+    }
+   },
+   "expected": "判定保留",
+   "pass_": true
+  },
+  {
+   "id": "S12",
+   "note": "軌道解なし",
+   "input": {
+    "num": 1,
+    "match": "A",
+    "has_orbit": false,
+    "solution": "none",
+    "f95": null,
+    "M1_range": [
+     0.58,
+     0.95
+    ],
+    "M_G": 6.94,
+    "M_G_corr": 6.94,
+    "A_G_gsp": null,
+    "A_G_tge": 1.1139,
+    "dcolour": 0.39
+   },
+   "output": {
+    "mass_axis": "対象外",
+    "phot_axis": "対象外",
+    "label": "軌道解なし",
+    "reasons": [
+     "軌道解が無い"
+    ],
+    "margins": {}
+   },
+   "expected": "軌道解なし",
+   "pass_": true
+  }
+ ],
+ "adversarial": [
+  {
+   "id": "A1",
+   "note": "NaN の減光（GSP 側）。v2 では BH非支持 になった",
+   "input": {
+    "num": 9,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.014168281215786137,
+     0.024917291774521833
+    ],
+    "M1_range": [
+     0.9,
+     1.57
+    ],
+    "M_G": 4.32,
+    "M_G_corr": 4.02,
+    "A_G_gsp": NaN,
+    "A_G_tge": 1.4664,
+    "dcolour": 0.12
+   },
+   "output": {
+    "mass_axis": "判定不能",
+    "phot_axis": "判定不能",
+    "label": "判定保留（入力不正）",
+    "reasons": [
+     "入力が不正のため判定を保留する: 減光 A_G_gsp が有限の数値でない"
+    ],
+    "margins": {}
+   },
+   "expected": "判定保留（入力不正）",
+   "pass_": true
+  },
+  {
+   "id": "A2",
+   "note": "NaN の色差。v2 では旗が「なし」に化けて #8 が BH非支持 になった",
+   "input": {
+    "num": 8,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.024709736466311003,
+     0.0766031920234604
+    ],
+    "M1_range": [
+     0.63,
+     1.03
+    ],
+    "M_G": 6.46,
+    "M_G_corr": 6.46,
+    "A_G_gsp": null,
+    "A_G_tge": 1.2589,
+    "dcolour": NaN
+   },
+   "output": {
+    "mass_axis": "判定不能",
+    "phot_axis": "判定不能",
+    "label": "判定保留（入力不正）",
+    "reasons": [
+     "入力が不正のため判定を保留する: 色の差（dcolour） が有限の数値でない"
+    ],
+    "margins": {}
+   },
+   "expected": "判定保留（入力不正）",
+   "pass_": true
+  },
+  {
+   "id": "A3",
+   "note": "負の減光（TGE のみ）。v2 では S9 型が BH非支持 になった",
+   "input": {
+    "num": 4,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.05233166499420931,
+     0.09913539779506524
+    ],
+    "M1_range": [
+     1.06,
+     1.87
+    ],
+    "M_G": 1.8,
+    "M_G_corr": 1.5,
+    "A_G_gsp": null,
+    "A_G_tge": -2.0,
+    "dcolour": 0.1
+   },
+   "output": {
+    "mass_axis": "判定不能",
+    "phot_axis": "判定不能",
+    "label": "判定保留（入力不正）",
+    "reasons": [
+     "入力が不正のため判定を保留する: 減光 A_G_tge が負である"
+    ],
+    "margins": {}
+   },
+   "expected": "判定保留（入力不正）",
+   "pass_": true
+  },
+  {
+   "id": "A4",
+   "note": "逆転した f95 区間",
+   "input": {
+    "num": 4,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.09913539779506524,
+     0.05233166499420931
+    ],
+    "M1_range": [
+     1.06,
+     1.87
+    ],
+    "M_G": 3.61,
+    "M_G_corr": 3.21,
+    "A_G_gsp": 0.4042,
+    "A_G_tge": 0.9811,
+    "dcolour": 0.24
+   },
+   "output": {
+    "mass_axis": "判定不能",
+    "phot_axis": "判定不能",
+    "label": "判定保留（入力不正）",
+    "reasons": [
+     "入力が不正のため判定を保留する: f 95% 区間（f95） の下限が上限を超えている"
+    ],
+    "margins": {}
+   },
+   "expected": "判定保留（入力不正）",
+   "pass_": true
+  },
+  {
+   "id": "A5",
+   "note": "負の f95。v2 では M2=0 のまま BH非支持 になった",
+   "input": {
+    "num": 9,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     -0.5,
+     -0.1
+    ],
+    "M1_range": [
+     0.9,
+     1.57
+    ],
+    "M_G": 4.32,
+    "M_G_corr": 4.02,
+    "A_G_gsp": 0.3036,
+    "A_G_tge": 1.4664,
+    "dcolour": 0.12
+   },
+   "output": {
+    "mass_axis": "判定不能",
+    "phot_axis": "判定不能",
+    "label": "判定保留（入力不正）",
+    "reasons": [
+     "入力が不正のため判定を保留する: f 95% 区間（f95） に正でない値がある"
+    ],
+    "margins": {}
+   },
+   "expected": "判定保留（入力不正）",
+   "pass_": true
+  },
+  {
+   "id": "A6",
+   "note": "未知の解の種類。v2 では astrometric 扱いで BH非支持 になった",
+   "input": {
+    "num": 10,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "orbital",
+    "f95": [
+     0.5,
+     0.8
+    ],
+    "M1_range": [
+     0.77,
+     1.25
+    ],
+    "M_G": 5.08,
+    "M_G_corr": 5.08,
+    "A_G_gsp": null,
+    "A_G_tge": 1.0004,
+    "dcolour": 0.19
+   },
+   "output": {
+    "mass_axis": "判定不能",
+    "phot_axis": "判定不能",
+    "label": "判定保留（入力不正）",
+    "reasons": [
+     "入力が不正のため判定を保留する: 軌道解の種類（solution）が未知の値である: 'orbital'"
+    ],
+    "margins": {}
+   },
+   "expected": "判定保留（入力不正）",
+   "pass_": true
+  },
+  {
+   "id": "A7",
+   "note": "未知の対応付け。v2 では黙って BH候補 になった",
+   "input": {
+    "num": 6,
+    "match": "X",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     7.58,
+     18.14
+    ],
+    "M1_range": [
+     0.74,
+     1.31
+    ],
+    "M_G": 5.35,
+    "M_G_corr": 4.79,
+    "A_G_gsp": 0.5575,
+    "A_G_tge": 1.4387,
+    "dcolour": 0.13
+   },
+   "output": {
+    "mass_axis": "判定不能",
+    "phot_axis": "判定不能",
+    "label": "判定保留（入力不正）",
+    "reasons": [
+     "入力が不正のため判定を保留する: 対応付け（match）が未知の値である: 'X'"
+    ],
+    "margins": {}
+   },
+   "expected": "判定保留（入力不正）",
+   "pass_": true
+  },
+  {
+   "id": "A8",
+   "note": "M_G = +inf。v2 では flip=inf のまま BH非支持 になった",
+   "input": {
+    "num": 9,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.014168281215786137,
+     0.024917291774521833
+    ],
+    "M1_range": [
+     0.9,
+     1.57
+    ],
+    "M_G": Infinity,
+    "M_G_corr": 4.02,
+    "A_G_gsp": 0.3036,
+    "A_G_tge": 1.4664,
+    "dcolour": 0.12
+   },
+   "output": {
+    "mass_axis": "判定不能",
+    "phot_axis": "判定不能",
+    "label": "判定保留（入力不正）",
+    "reasons": [
+     "入力が不正のため判定を保留する: M_G が有限の数値でない"
+    ],
+    "margins": {}
+   },
+   "expected": "判定保留（入力不正）",
+   "pass_": true
+  },
+  {
+   "id": "A9",
+   "note": "逆転した M1_range。v2 では M2_lo > M2_hi のまま出力された",
+   "input": {
+    "num": 9,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.014168281215786137,
+     0.024917291774521833
+    ],
+    "M1_range": [
+     1.57,
+     0.9
+    ],
+    "M_G": 4.32,
+    "M_G_corr": 4.02,
+    "A_G_gsp": 0.3036,
+    "A_G_tge": 1.4664,
+    "dcolour": 0.12
+   },
+   "output": {
+    "mass_axis": "判定不能",
+    "phot_axis": "判定不能",
+    "label": "判定保留（入力不正）",
+    "reasons": [
+     "入力が不正のため判定を保留する: M1 範囲（M1_range） の下限が上限を超えている"
+    ],
+    "margins": {}
+   },
+   "expected": "判定保留（入力不正）",
+   "pass_": true
+  },
+  {
+   "id": "A10",
+   "note": "dcolour = -inf",
+   "input": {
+    "num": 9,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.014168281215786137,
+     0.024917291774521833
+    ],
+    "M1_range": [
+     0.9,
+     1.57
+    ],
+    "M_G": 4.32,
+    "M_G_corr": 4.02,
+    "A_G_gsp": 0.3036,
+    "A_G_tge": 1.4664,
+    "dcolour": -Infinity
+   },
+   "output": {
+    "mass_axis": "判定不能",
+    "phot_axis": "判定不能",
+    "label": "判定保留（入力不正）",
+    "reasons": [
+     "入力が不正のため判定を保留する: 色の差（dcolour） が有限の数値でない"
+    ],
+    "margins": {}
+   },
+   "expected": "判定保留（入力不正）",
+   "pass_": true
+  },
+  {
+   "id": "A11",
+   "note": "f95 に文字列が混入",
+   "input": {
+    "num": 9,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     "0.02",
+     0.03
+    ],
+    "M1_range": [
+     0.9,
+     1.57
+    ],
+    "M_G": 4.32,
+    "M_G_corr": 4.02,
+    "A_G_gsp": 0.3036,
+    "A_G_tge": 1.4664,
+    "dcolour": 0.12
+   },
+   "output": {
+    "mass_axis": "判定不能",
+    "phot_axis": "判定不能",
+    "label": "判定保留（入力不正）",
+    "reasons": [
+     "入力が不正のため判定を保留する: f 95% 区間（f95） に有限でない値がある"
+    ],
+    "margins": {}
+   },
+   "expected": "判定保留（入力不正）",
+   "pass_": true
+  }
+ ],
+ "boundary": [
+  {
+   "id": "B1",
+   "note": "flip が 1.5 に達する最小の M_G（>= 側: 非支持）",
+   "input": {
+    "num": 4,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.05233166499420931,
+     0.09913539779506524
+    ],
+    "M1_range": [
+     1.06,
+     1.87
+    ],
+    "M_G": 2.7811000000000003,
+    "M_G_corr": 2.7811000000000003,
+    "A_G_gsp": 0.4042,
+    "A_G_tge": 0.9811,
+    "dcolour": 0.1
+   },
+   "output": {
+    "mass_axis": "非支持",
+    "phot_axis": "光度天井で確認",
+    "label": "BH非支持",
+    "reasons": [
+     "M2上限 0.92 < 3、光度天井の余裕 1.50 ≥ 1.5、色の旗 なし"
+    ],
+    "margins": {
+     "A_G_max": 0.9811,
+     "margin_cand": -6.99,
+     "flip_margin": 1.5,
+     "M2_lo": 0.504,
+     "M2_hi": 0.916,
+     "colour_flag": "なし"
+    }
+   },
+   "expected": "BH非支持",
+   "pass_": true
+  },
+  {
+   "id": "B2",
+   "note": "その 1 ulp 下（< 側: 保留）",
+   "input": {
+    "num": 4,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.05233166499420931,
+     0.09913539779506524
+    ],
+    "M1_range": [
+     1.06,
+     1.87
+    ],
+    "M_G": 2.7811,
+    "M_G_corr": 2.7811,
+    "A_G_gsp": 0.4042,
+    "A_G_tge": 0.9811,
+    "dcolour": 0.1
+   },
+   "output": {
+    "mass_axis": "非支持",
+    "phot_axis": "光度天井が不足",
+    "label": "判定保留",
+    "reasons": [
+     "M2上限 0.92 < 3 だが光度天井の余裕 1.50 < 1.5（M2>3 の主系列伴星を排除できない）"
+    ],
+    "margins": {
+     "A_G_max": 0.9811,
+     "margin_cand": -6.99,
+     "flip_margin": 1.5,
+     "M2_lo": 0.504,
+     "M2_hi": 0.916,
+     "colour_flag": "なし"
+    }
+   },
+   "expected": "判定保留",
+   "pass_": true
+  },
+  {
+   "id": "B3",
+   "note": "f95 の下限 = 上限（点区間は正常）",
+   "input": {
+    "num": 9,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.02,
+     0.02
+    ],
+    "M1_range": [
+     0.9,
+     1.57
+    ],
+    "M_G": 4.32,
+    "M_G_corr": 4.02,
+    "A_G_gsp": 0.3036,
+    "A_G_tge": 1.4664,
+    "dcolour": 0.12
+   },
+   "output": {
+    "mass_axis": "非支持",
+    "phot_axis": "光度天井で確認",
+    "label": "BH非支持",
+    "reasons": [
+     "M2上限 0.43 < 3、光度天井の余裕 2.55 ≥ 1.5、色の旗 なし"
+    ],
+    "margins": {
+     "A_G_max": 1.4664,
+     "margin_cand": -7.66,
+     "flip_margin": 2.55,
+     "M2_lo": 0.308,
+     "M2_hi": 0.431,
+     "colour_flag": "なし"
+    }
+   },
+   "expected": "BH非支持",
+   "pass_": true
+  },
+  {
+   "id": "B4",
+   "note": "減光 0.0 は正常",
+   "input": {
+    "num": 9,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.014168281215786137,
+     0.024917291774521833
+    ],
+    "M1_range": [
+     0.9,
+     1.57
+    ],
+    "M_G": 4.32,
+    "M_G_corr": 4.02,
+    "A_G_gsp": null,
+    "A_G_tge": 0.0,
+    "dcolour": 0.12
+   },
+   "output": {
+    "mass_axis": "非支持",
+    "phot_axis": "光度天井で確認",
+    "label": "BH非支持",
+    "reasons": [
+     "M2上限 0.47 < 3、光度天井の余裕 4.02 ≥ 1.5、色の旗 なし"
+    ],
+    "margins": {
+     "A_G_max": 0.0,
+     "margin_cand": -6.54,
+     "flip_margin": 4.02,
+     "M2_lo": 0.268,
+     "M2_hi": 0.47,
+     "colour_flag": "なし"
+    }
+   },
+   "expected": "BH非支持",
+   "pass_": true
+  },
+  {
+   "id": "B5",
+   "note": "dcolour = 0.30 ちょうど（弱い注意。非支持は維持）",
+   "input": {
+    "num": 9,
+    "match": "A",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     0.014168281215786137,
+     0.024917291774521833
+    ],
+    "M1_range": [
+     0.9,
+     1.57
+    ],
+    "M_G": 4.32,
+    "M_G_corr": 4.02,
+    "A_G_gsp": 0.3036,
+    "A_G_tge": 1.4664,
+    "dcolour": 0.3
+   },
+   "output": {
+    "mass_axis": "非支持",
+    "phot_axis": "光度天井で確認",
+    "label": "BH非支持",
+    "reasons": [
+     "M2上限 0.47 < 3、光度天井の余裕 2.55 ≥ 1.5、色の旗 弱い注意"
+    ],
+    "margins": {
+     "A_G_max": 1.4664,
+     "margin_cand": -8.01,
+     "flip_margin": 2.55,
+     "M2_lo": 0.268,
+     "M2_hi": 0.47,
+     "colour_flag": "弱い注意"
+    }
+   },
+   "expected": "BH非支持",
+   "pass_": true
+  },
+  {
+   "id": "B6",
+   "note": "対応 B は正常系として処理する",
+   "input": {
+    "num": 6,
+    "match": "B",
+    "has_orbit": true,
+    "solution": "astrometric",
+    "f95": [
+     7.58,
+     18.14
+    ],
+    "M1_range": [
+     0.74,
+     1.31
+    ],
+    "M_G": 5.35,
+    "M_G_corr": 4.79,
+    "A_G_gsp": 0.5575,
+    "A_G_tge": 1.4387,
+    "dcolour": 0.13
+   },
+   "output": {
+    "mass_axis": "支持",
+    "phot_axis": "排除済み",
+    "label": "BH候補",
+    "reasons": [
+     "M2下限 8.89 > 3、測光余裕 6.65 ≥ 1.0、M_G,0 4.79 ≥ 2.0"
+    ],
+    "margins": {
+     "A_G_max": 1.4387,
+     "margin_cand": 6.65,
+     "flip_margin": 3.61,
+     "M2_lo": 8.894,
+     "M2_hi": 20.529,
+     "colour_flag": "なし"
+    }
+   },
+   "expected": "BH候補",
+   "pass_": true
+  }
+ ],
+ "anchor_unit": {
+  "mg_ms_3Msun": 0.3,
+  "expected": 0.3,
+  "pass_": true
+ },
+ "status": "OK"
+}
