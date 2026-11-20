@@ -10,6 +10,8 @@ SHA-256 の一覧。第1回固定（2026-11-15）は凍結本体・追記1・追
 差し替えた（has_orbit の型検査、テストベクトル JSON の標準化。判定ロジックは同一）。
 あわせて追記8（状態区分の更新、ドライラン件数 117 → 130 の訂正）と統合規則
 （参照実装の版数）を更新したため、該当3ファイルのハッシュは本索引の値が正である。
+2026-11-20 の Claude v9 §4.1 を受け、統合規則 §5 の文言を是正した（「物理的に矛盾」→
+「代理量との乖離」。判定への影響なし）。統合規則のハッシュは本索引の値が正である。
 
 固定の判断: 2026-11-19、中谷さん。本固定は通過点であり、目的は三者が以後
 まったく同じ設定（判定規則・参照実装・評価表）に対して検証できるようにする
@@ -28,7 +30,7 @@ SHA-256 の一覧。第1回固定（2026-11-15）は凍結本体・追記1・追
 | dr4_freeze_supplement6.md（追記6） | 1a9700a6cc04369cbd723c86e2e47b9e93c0ddf328ffe2e4341bf658d2591685 |
 | dr4_freeze_supplement7.md（追記7） | 81f992171060ff13dd97edeb46b3097d0dbb5d0cba2fd9c96fb793f0db86cfff |
 | dr4_freeze_supplement8.md（追記8） | 2405b6573e37280c58128cd0d6cf2b82b9718e5873a25d5520699f609e23a186 |
-| dr4_consolidated_rules.md（統合規則） | e2984bd6264c5056435ac06b07d42c1c48567e608047de9db0f386e50e28fac1 |
+| dr4_consolidated_rules.md（統合規則） | 8a426db8a18a12c832da7ce62d4ec12d00ded77116dd778756b232dd9025b835 |
 | dr4_m1m2_table_v4.md（評価表 v4） | 540f063baefa559833b59b95b916bbb5e2e13d827953ca3fdfb39d6bee9e41e5 |
 | dr4_apply_rules_v4.py（参照実装 v4） | 29ad8e916c0ab5e03b43a264311ea6127fb0a7a216afd0cba43e74de12e079da |
 | dr4_test_vectors_v4.json（テストベクトル v4） | d324424f4f1878f7f5718cddb893b10f804c417fd139c6ed678f4b2ed1789419 |
