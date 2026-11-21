@@ -21,3 +21,7 @@
 | S4g2 | #4 の TGE 欠落 | BH非支持 → BH非支持 | A_G,max 0.9811 → 0.4042、flip 2.33 → 2.91（警告あり） |
 
 教訓: 欠損はラベルを変えなくても採用減光と判定余裕を動かす。DR4 当日の実行では、余裕が変わった場合も警告として記録する（S4i の原則）。追加試験の結果は `dr4_dryrun_v4_extra_results.json`。
+
+## 固定の範囲についての明記（2026-11-21）
+
+第3回固定（2026-11-22）の対象は索引 v4 の 15 ファイル（固定されるドライラン資料は `dr4_dryrun_v4.py` と `dr4_dryrun_v4_results.json`）である。本書と、追加試験の `dr4_dryrun_v4_extra.py` / `dr4_dryrun_v4_extra_results.json`、`dr4_m1_reversal_check.py` は**固定対象外の補助資料**であり、GitHub と Drive に版を記録してある。固定後の検証で必要になれば、補助資料として別途ハッシュを固定する。

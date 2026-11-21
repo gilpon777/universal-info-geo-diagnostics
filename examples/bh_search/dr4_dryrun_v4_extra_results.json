@@ -5,11 +5,23 @@
   "desc": "#12 の GSP-Phot 欠落（TGE は残る）",
   "label_before": "判定保留",
   "label_after": "判定保留",
-  "A_G_max_before": 2.6713,
-  "A_G_max_after": 1.4664,
-  "flip_before": 5.44,
-  "flip_after": 6.64,
-  "margin_warning": true
+  "warnings": [
+   "margin_changed"
+  ],
+  "margin_deltas": {
+   "A_G_max": [
+    2.6713,
+    1.4664
+   ],
+   "flip_margin": [
+    5.44,
+    6.64
+   ],
+   "margin_cand": [
+    -4.02,
+    -2.82
+   ]
+  }
  },
  {
   "id": "S4g",
@@ -17,11 +29,8 @@
   "desc": "#12 の TGE 欠落（GSP は残る）",
   "label_before": "判定保留",
   "label_after": "判定保留",
-  "A_G_max_before": 2.6713,
-  "A_G_max_after": 2.6713,
-  "flip_before": 5.44,
-  "flip_after": 5.44,
-  "margin_warning": false
+  "warnings": [],
+  "margin_deltas": {}
  },
  {
   "id": "S4h",
@@ -29,11 +38,11 @@
   "desc": "#12 の減光双方欠落",
   "label_before": "判定保留",
   "label_after": "判定保留（入力不足）",
-  "A_G_max_before": 2.6713,
-  "A_G_max_after": null,
-  "flip_before": 5.44,
-  "flip_after": null,
-  "margin_warning": false
+  "warnings": [
+   "label_changed",
+   "became_insufficient"
+  ],
+  "margin_deltas": {}
  },
  {
   "id": "S4g2",
@@ -41,10 +50,22 @@
   "desc": "#4 の TGE 欠落（GSP は残る）",
   "label_before": "BH非支持",
   "label_after": "BH非支持",
-  "A_G_max_before": 0.9811,
-  "A_G_max_after": 0.4042,
-  "flip_before": 2.33,
-  "flip_after": 2.91,
-  "margin_warning": true
+  "warnings": [
+   "margin_changed"
+  ],
+  "margin_deltas": {
+   "A_G_max": [
+    0.9811,
+    0.4042
+   ],
+   "flip_margin": [
+    2.33,
+    2.91
+   ],
+   "margin_cand": [
+    -6.16,
+    -5.58
+   ]
+  }
  }
 ]
