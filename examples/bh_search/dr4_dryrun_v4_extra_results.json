@@ -67,5 +67,17 @@
     -5.58
    ]
   }
+ },
+ {
+  "id": "S4r",
+  "num": 12,
+  "desc": "#12 の減光双方欠落 → TGE が届いて余裕が計算可能になる（逆方向）",
+  "label_before": "判定保留（入力不足）",
+  "label_after": "判定保留",
+  "warnings": [
+   "label_changed",
+   "became_sufficient"
+  ],
+  "margin_deltas": {}
  }
 ]

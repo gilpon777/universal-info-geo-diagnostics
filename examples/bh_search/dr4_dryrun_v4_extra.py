@@ -16,10 +16,12 @@ TOL = 1e-9  # 浮動小数点の微小差で誤警告しないための許容誤
 FIELDS = ["A_G_max", "flip_margin", "margin_cand", "M2_lo", "M2_hi"]
 base = {n: rules.build(n) for n in range(1, 14)}
 CASES = [
-    ("S4f", 12, dict(A_G_gsp=None), "#12 の GSP-Phot 欠落（TGE は残る）"),
-    ("S4g", 12, dict(A_G_tge=None), "#12 の TGE 欠落（GSP は残る）"),
-    ("S4h", 12, dict(A_G_gsp=None, A_G_tge=None), "#12 の減光双方欠落"),
-    ("S4g2", 4, dict(A_G_tge=None), "#4 の TGE 欠落（GSP は残る）"),
+    ("S4f", 12, {}, dict(A_G_gsp=None), "#12 の GSP-Phot 欠落（TGE は残る）"),
+    ("S4g", 12, {}, dict(A_G_tge=None), "#12 の TGE 欠落（GSP は残る）"),
+    ("S4h", 12, {}, dict(A_G_gsp=None, A_G_tge=None), "#12 の減光双方欠落"),
+    ("S4g2", 4, {}, dict(A_G_tge=None), "#4 の TGE 欠落（GSP は残る）"),
+    ("S4r", 12, dict(A_G_gsp=None, A_G_tge=None), dict(A_G_gsp=None),
+     "#12 の減光双方欠落 → TGE が届いて余裕が計算可能になる（逆方向）"),
 ]
 
 def diff_margins(before, after):
@@ -30,6 +32,8 @@ def diff_margins(before, after):
     mb, ma = before["margins"], after["margins"]
     if mb and not ma:
         warns.append("became_insufficient")
+    if not mb and ma:
+        warns.append("became_sufficient")
     if mb and ma:
         for k in FIELDS:
             vb, va = mb.get(k), ma.get(k)
@@ -42,9 +46,10 @@ def diff_margins(before, after):
     return warns, deltas
 
 out = []
-for cid, num, over, desc in CASES:
+for cid, num, before_over, over, desc in CASES:
+    ob = copy.deepcopy(base[num]); ob.update(before_over)
     o = copy.deepcopy(base[num]); o.update(over)
-    r = rules.label(o); b = rules.label(copy.deepcopy(base[num]))
+    r = rules.label(o); b = rules.label(ob)
     warns, deltas = diff_margins(b, r)
     rec = dict(id=cid, num=num, desc=desc, label_before=b["label"], label_after=r["label"],
                warnings=warns, margin_deltas=deltas)

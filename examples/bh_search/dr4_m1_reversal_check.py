@@ -17,12 +17,13 @@ for n in sorted(rows):
         continue
     crit = math.sqrt(27.0 / o["f95"][1]) - 3
     hi = o["M1_range"][1]
-    # crit < 0 は「許される正の M1 の全域で M2 が 3 M_sun を超える側」を意味し、
-    # 「反転し得る」ではない（ChatGPT 第13回の指摘で修正、2026-11-21）。
-    if crit < 0:
-        verdict = "全ての正のM1で3太陽質量超"
+    # 判定は M1 の上下端の両方で決める（ChatGPT 第14回の指摘で修正、2026-11-21）。
+    # crit < 0 は「許される正の M1 の全域で M2 が 3 M_sun を超える側」を意味する。
+    lo = o["M1_range"][0]
+    if crit <= 0 or lo >= crit:
+        verdict = "許容範囲全域で3太陽質量超"
     elif hi < crit:
-        verdict = "反転しない"
+        verdict = "許容範囲全域で3太陽質量未満"
     else:
-        verdict = "反転し得る"
+        verdict = "許容範囲内に反転境界あり"
     print(f"{n:>3} {hi:>7.2f} {crit:>8.2f} {crit - hi:>7.2f}  {verdict}")
