@@ -20,10 +20,36 @@ for n in sorted(rows):
     # 判定は M1 の上下端の両方で決める（ChatGPT 第14回の指摘で修正、2026-11-21）。
     # crit < 0 は「許される正の M1 の全域で M2 が 3 M_sun を超える側」を意味する。
     lo = o["M1_range"][0]
-    if crit <= 0 or lo >= crit:
+    if crit <= 0 or lo > crit:
         verdict = "許容範囲全域で3太陽質量超"
     elif hi < crit:
         verdict = "許容範囲全域で3太陽質量未満"
     else:
         verdict = "許容範囲内に反転境界あり"
     print(f"{n:>3} {hi:>7.2f} {crit:>8.2f} {crit - hi:>7.2f}  {verdict}")
+
+
+def _selftest():
+    """境界テスト T1-T6（ChatGPT 第15回の提案、2026-11-22）。"""
+    def verdict_for(lo, hi, crit):
+        if crit <= 0 or lo > crit:
+            return "許容範囲全域で3太陽質量超"
+        if hi < crit:
+            return "許容範囲全域で3太陽質量未満"
+        return "許容範囲内に反転境界あり"
+    cases = [
+        ("T1", 1.0, 2.0, -0.5, "許容範囲全域で3太陽質量超"),
+        ("T2", 6.0, 9.0, 5.0, "許容範囲全域で3太陽質量超"),
+        ("T3", 5.0, 9.0, 5.0, "許容範囲内に反転境界あり"),
+        ("T4", 1.0, 9.0, 5.0, "許容範囲内に反転境界あり"),
+        ("T5", 1.0, 5.0, 5.0, "許容範囲内に反転境界あり"),
+        ("T6", 1.0, 2.0, 5.0, "許容範囲全域で3太陽質量未満"),
+    ]
+    for name, lo, hi, crit, exp in cases:
+        got = verdict_for(lo, hi, crit)
+        assert got == exp, (name, got, exp)
+    print("boundary tests T1-T6: OK")
+
+
+if __name__ == "__main__" or True:
+    _selftest()
