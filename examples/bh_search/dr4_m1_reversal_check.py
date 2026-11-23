@@ -15,6 +15,11 @@ for n in sorted(rows):
     o = rules.build(n)
     if not o["has_orbit"] or o["f95"] is None:
         continue
+    if o.get("solution") == "spectroscopic_SB1":
+        # SB1 の f は sin^3 i を含み M2 の上限を与えないため対象外
+        # （Claude v12 §6 の指摘、2026-11-23）。
+        print(f"{n:>3} {'--':>7} {'--':>8} {'--':>7}  対象外（SB1: 傾斜角未確定のため M2 上限なし）")
+        continue
     crit = math.sqrt(27.0 / o["f95"][1]) - 3
     crit_lo_f = math.sqrt(27.0 / o["f95"][0]) - 3
     hi = o["M1_range"][1]
