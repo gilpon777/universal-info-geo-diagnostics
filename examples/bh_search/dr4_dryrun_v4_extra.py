@@ -62,19 +62,53 @@ print("saved: dr4_dryrun_v4_extra_results.json")
 # ---- 色の旗の境界警告（記録のみ、2026-11-25 中谷さんの決定） ----
 # 色の旗の閾値 0.30 から ±0.08 以内にある天体を「境界」として記録する。
 # ラベルは変えない（自動保留にはしない）。Claude v12 §3.5 の提案を受けた実装。
-def colour_boundary_warnings():
+# ChatGPT 第18回の指摘（2026-11-26）で、JSON 保存・入力引数化・実行条件を修正。
+import json as _json
+
+
+def colour_boundary_warnings(objects=None, threshold=0.30, band=0.08,
+                             correction="A (GSP-Phot)"):
+    """objects: 判定入力 dict のリスト（num と dcolour を含む）。
+    None のときは凍結した13件（参照実装の組み込み入力）を使う。
+    DR4 当日は実入力のリストを渡す。戻り値は警告レコードのリストで、
+    判定ラベルには一切触れない。"""
+    if objects is None:
+        objects = [rules.build(n) for n in sorted(rules.ROWS)]
     out = []
-    for n in sorted(rules.ROWS):
-        o = rules.build(n)
+    for o in objects:
         dc = o.get("dcolour")
         if dc is None:
             continue
-        if abs(abs(dc) - 0.30) <= 0.08 + 1e-9:
-            out.append({"num": n, "dcolour": dc,
-                        "distance_to_threshold": round(abs(abs(dc) - 0.30), 3)})
+        dist = abs(abs(dc) - threshold)
+        if dist <= band + 1e-9:
+            out.append({"num": o.get("num"), "dcolour": dc,
+                        "threshold": threshold,
+                        "distance_to_threshold": round(dist, 3),
+                        "correction": correction,
+                        "note": "境界（記録のみ、ラベル変更なし）"})
     return out
 
 
-if __name__ == "__main__" or True:
+def _selftest_colour_boundary():
+    base = [rules.build(n) for n in sorted(rules.ROWS)]
+    labels_before = {o["num"]: rules.label(o)["label"] for o in base}
+    w = colour_boundary_warnings(base)
+    labels_after = {o["num"]: rules.label(o)["label"] for o in base}
+    assert labels_before == labels_after, "警告処理がラベルを変えた"
+    assert {r["num"] for r in w} == {4, 5, 7, 12}, w
+    # DR4 実入力形式（任意の入力リスト）でも動くこと
+    fake = [{"num": 901, "dcolour": 0.29}, {"num": 902, "dcolour": 0.05},
+            {"num": 903, "dcolour": None}]
+    wf = colour_boundary_warnings(fake)
+    assert [r["num"] for r in wf] == [901], wf
+    print("colour boundary selftest: OK (labels unchanged, warnings:", 
+          [r["num"] for r in w], ")")
+
+
+if __name__ == "__main__":
+    _selftest_colour_boundary()
     cb = colour_boundary_warnings()
+    _json.dump(cb, open("dr4_colour_boundary_warnings.json", "w"),
+               ensure_ascii=False, indent=1)
     print("colour boundary warnings (record only):", cb)
+    print("saved: dr4_colour_boundary_warnings.json")
