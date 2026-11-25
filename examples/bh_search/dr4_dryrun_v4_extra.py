@@ -57,3 +57,24 @@ for cid, num, before_over, over, desc in CASES:
     print(f"{cid} #{num} {desc}: {b['label']} -> {r['label']} | 警告: {warns or 'なし'} | 差分: {deltas}")
 json.dump(out, open("dr4_dryrun_v4_extra_results.json", "w"), ensure_ascii=False, indent=1)
 print("saved: dr4_dryrun_v4_extra_results.json")
+
+
+# ---- 色の旗の境界警告（記録のみ、2026-11-25 中谷さんの決定） ----
+# 色の旗の閾値 0.30 から ±0.08 以内にある天体を「境界」として記録する。
+# ラベルは変えない（自動保留にはしない）。Claude v12 §3.5 の提案を受けた実装。
+def colour_boundary_warnings():
+    out = []
+    for n in sorted(rules.ROWS):
+        o = rules.build(n)
+        dc = o.get("dcolour")
+        if dc is None:
+            continue
+        if abs(abs(dc) - 0.30) <= 0.08 + 1e-9:
+            out.append({"num": n, "dcolour": dc,
+                        "distance_to_threshold": round(abs(abs(dc) - 0.30), 3)})
+    return out
+
+
+if __name__ == "__main__" or True:
+    cb = colour_boundary_warnings()
+    print("colour boundary warnings (record only):", cb)
