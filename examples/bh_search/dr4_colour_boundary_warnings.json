@@ -1,34 +1,45 @@
-[
- {
-  "num": 4,
-  "dcolour": 0.24,
+{
+ "meta": {
+  "generated_at": "2026-11-27T14:34:50.540806+00:00",
+  "rules_version": "dr4_apply_rules_v4 (frozen, fixation 3)",
+  "input_source": "frozen13 (dr4_apply_rules_v4.ROWS)",
   "threshold": 0.3,
-  "distance_to_threshold": 0.06,
-  "correction": "A (GSP-Phot)",
-  "note": "境界（記録のみ、ラベル変更なし）"
+  "band": 0.08,
+  "correction": "A (GSP-Phot)"
  },
- {
-  "num": 5,
-  "dcolour": 0.38,
-  "threshold": 0.3,
-  "distance_to_threshold": 0.08,
-  "correction": "A (GSP-Phot)",
-  "note": "境界（記録のみ、ラベル変更なし）"
- },
- {
-  "num": 7,
-  "dcolour": 0.23,
-  "threshold": 0.3,
-  "distance_to_threshold": 0.07,
-  "correction": "A (GSP-Phot)",
-  "note": "境界（記録のみ、ラベル変更なし）"
- },
- {
-  "num": 12,
-  "dcolour": -0.32,
-  "threshold": 0.3,
-  "distance_to_threshold": 0.02,
-  "correction": "A (GSP-Phot)",
-  "note": "境界（記録のみ、ラベル変更なし）"
- }
-]
+ "warnings": [
+  {
+   "num": 4,
+   "dcolour": 0.24,
+   "threshold": 0.3,
+   "distance_to_threshold": 0.06,
+   "correction": "A (GSP-Phot)",
+   "note": "境界（記録のみ、ラベル変更なし）"
+  },
+  {
+   "num": 5,
+   "dcolour": 0.38,
+   "threshold": 0.3,
+   "distance_to_threshold": 0.08,
+   "correction": "A (GSP-Phot)",
+   "note": "境界（記録のみ、ラベル変更なし）"
+  },
+  {
+   "num": 7,
+   "dcolour": 0.23,
+   "threshold": 0.3,
+   "distance_to_threshold": 0.07,
+   "correction": "A (GSP-Phot)",
+   "note": "境界（記録のみ、ラベル変更なし）"
+  },
+  {
+   "num": 12,
+   "dcolour": -0.32,
+   "threshold": 0.3,
+   "distance_to_threshold": 0.02,
+   "correction": "A (GSP-Phot)",
+   "note": "境界（記録のみ、ラベル変更なし）"
+  }
+ ],
+ "errors": []
+}

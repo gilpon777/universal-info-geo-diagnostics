@@ -1,0 +1,17 @@
+== import test (no side effects expected) ==
+import OK, no output above this line from the module
+== main run ==
+S4f #12 #12 の GSP-Phot 欠落（TGE は残る）: 判定保留 -> 判定保留 | 警告: ['margin_changed'] | 差分: {'A_G_max': [2.6713, 1.4664], 'flip_margin': [5.44, 6.64], 'margin_cand': [-4.02, -2.82]}
+S4g #12 #12 の TGE 欠落（GSP は残る）: 判定保留 -> 判定保留 | 警告: なし | 差分: {}
+S4h #12 #12 の減光双方欠落: 判定保留 -> 判定保留（入力不足） | 警告: ['label_changed', 'became_insufficient'] | 差分: {}
+S4g2 #4 #4 の TGE 欠落（GSP は残る）: BH非支持 -> BH非支持 | 警告: ['margin_changed'] | 差分: {'A_G_max': [0.9811, 0.4042], 'flip_margin': [2.33, 2.91], 'margin_cand': [-6.16, -5.58]}
+S4r #12 #12 の減光双方欠落 → TGE が届いて余裕が計算可能になる（逆方向）: 判定保留（入力不足） -> 判定保留 | 警告: ['label_changed', 'became_sufficient'] | 差分: {}
+saved: dr4_dryrun_v4_extra_results.json
+colour boundary selftest: OK (labels unchanged, warnings: [4, 5, 7, 12] , invalid inputs recorded)
+colour boundary warnings (record only): [4, 5, 7, 12] errors: []
+saved: dr4_colour_boundary_warnings.json
+== frozen dry run (regression) ==
+総実行時間: 0.013 秒（S0〜S5、全 130 件の判定） status: OK
+== reference implementation self-test ==
+B5 BH非支持 OK - dcolour = 0.30 ちょうど（弱い注意。非支持は維持）
+B6 BH候補 OK - 対応 B は正常系として処理する
