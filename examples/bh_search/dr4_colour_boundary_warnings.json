@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated_at": "2026-11-27T14:34:50.540806+00:00",
+  "generated_at": "2026-11-27T14:50:46.549483+00:00",
   "rules_version": "dr4_apply_rules_v4 (frozen, fixation 3)",
   "input_source": "frozen13 (dr4_apply_rules_v4.ROWS)",
   "threshold": 0.3,
@@ -41,5 +41,6 @@
    "note": "境界（記録のみ、ラベル変更なし）"
   }
  ],
- "errors": []
+ "errors": [],
+ "missing": []
 }

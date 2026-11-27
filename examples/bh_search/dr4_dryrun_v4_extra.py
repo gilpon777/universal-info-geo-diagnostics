@@ -89,11 +89,12 @@ def colour_boundary_warnings(objects=None, threshold=0.30, band=0.08,
         raise ValueError("band は 0 以上の有限数でなければならない")
     if objects is None:
         objects = [rules.build(n) for n in sorted(rules.ROWS)]
-    warnings, errors = [], []
+    warnings, errors, missing = [], [], []
     for o in objects:
         num = o.get("num")
         dc = o.get("dcolour")
         if dc is None:
+            missing.append({"num": num, "reason": "dcolour 欠損（入力不足）"})
             continue
         if not _is_finite_number(dc):
             errors.append({"num": num, "dcolour_repr": repr(dc),
@@ -110,7 +111,7 @@ def colour_boundary_warnings(objects=None, threshold=0.30, band=0.08,
             "rules_version": "dr4_apply_rules_v4 (frozen, fixation 3)",
             "input_source": input_source,
             "threshold": threshold, "band": band, "correction": correction}
-    return {"meta": meta, "warnings": warnings, "errors": errors}
+    return {"meta": meta, "warnings": warnings, "errors": errors, "missing": missing}
 
 
 def _selftest_colour_boundary():
@@ -128,6 +129,7 @@ def _selftest_colour_boundary():
     rf = colour_boundary_warnings(fake, input_source="selftest")
     assert [r["num"] for r in rf["warnings"]] == [901], rf
     assert {r["num"] for r in rf["errors"]} == {904, 905}, rf
+    assert [r["num"] for r in rf["missing"]] == [903], rf
     print("colour boundary selftest: OK (labels unchanged, warnings:",
           [r["num"] for r in res["warnings"]], ", invalid inputs recorded)")
 
