@@ -1,0 +1,472 @@
+{
+ "meta": {
+  "version": "audit v2 (complete B-prime inputs, unrounded)",
+  "rule_Bprime": "A_G,max' = max(A_G_gsp, k_G*A0); M_G_corr' = M_G - A_G,max'; dcolour' uses A_used = k_G*A0",
+  "k_G_range": [
+   0.8,
+   0.88
+  ],
+  "k_G_status": "感度分析用の仮定範囲。DR3 公式係数による個別確定は今後の課題",
+  "r_spread": [
+   0.531,
+   0.563
+  ],
+  "r_spread_status": "GSP 実測10件の最小・最大。統計的な信頼区間ではない"
+ },
+ "objects": [
+  {
+   "num": 1,
+   "A": {
+    "A_G_gsp": null,
+    "A_G_tge": 1.1139,
+    "A_G_max": null,
+    "M_G_corr": 6.94,
+    "dcolour": 0.39,
+    "flip_margin": null,
+    "mass_axis": "対象外",
+    "phot_axis": "対象外",
+    "label": "軌道解なし"
+   },
+   "Bprime": {
+    "r_i": 0.542,
+    "r_i_source": "中央値代用",
+    "at_kG_0.84": {
+     "A_G_tge_prime": 0.9356759999999998,
+     "A_G_max_prime": 0.9356759999999998,
+     "M_G_corr_prime": 6.004324,
+     "dcolour_prime": 0.08251766800000016,
+     "flip_margin": null,
+     "mass_axis": "対象外",
+     "phot_axis": "対象外",
+     "label": "軌道解なし"
+    },
+    "labels_over_scan": [
+     "軌道解なし"
+    ],
+    "label_stable_over_scan": true,
+    "flip_margin_range": null
+   }
+  },
+  {
+   "num": 2,
+   "A": {
+    "A_G_gsp": 0.207,
+    "A_G_tge": 1.0468,
+    "A_G_max": null,
+    "M_G_corr": 5.96,
+    "dcolour": 0.05,
+    "flip_margin": null,
+    "mass_axis": "対象外",
+    "phot_axis": "対象外",
+    "label": "軌道解なし"
+   },
+   "Bprime": {
+    "r_i": 0.5309178743961352,
+    "r_i_source": "GSP実測",
+    "at_kG_0.84": {
+     "A_G_tge_prime": 0.879312,
+     "A_G_max_prime": 0.879312,
+     "M_G_corr_prime": 5.290688,
+     "dcolour_prime": -0.18208575797101456,
+     "flip_margin": null,
+     "mass_axis": "対象外",
+     "phot_axis": "対象外",
+     "label": "軌道解なし"
+    },
+    "labels_over_scan": [
+     "軌道解なし"
+    ],
+    "label_stable_over_scan": true,
+    "flip_margin_range": null
+   }
+  },
+  {
+   "num": 3,
+   "A": {
+    "A_G_gsp": 0.5942,
+    "A_G_tge": 1.0608,
+    "A_G_max": null,
+    "M_G_corr": 5.51,
+    "dcolour": 0.03,
+    "flip_margin": null,
+    "mass_axis": "対象外",
+    "phot_axis": "対象外",
+    "label": "軌道解なし"
+   },
+   "Bprime": {
+    "r_i": 0.5430831369909122,
+    "r_i_source": "GSP実測",
+    "at_kG_0.84": {
+     "A_G_tge_prime": 0.891072,
+     "A_G_max_prime": 0.891072,
+     "M_G_corr_prime": 5.208927999999999,
+     "dcolour_prime": -0.07349307704476593,
+     "flip_margin": null,
+     "mass_axis": "対象外",
+     "phot_axis": "対象外",
+     "label": "軌道解なし"
+    },
+    "labels_over_scan": [
+     "軌道解なし"
+    ],
+    "label_stable_over_scan": true,
+    "flip_margin_range": null
+   }
+  },
+  {
+   "num": 4,
+   "A": {
+    "A_G_gsp": 0.4042,
+    "A_G_tge": 0.9811,
+    "A_G_max": 0.9811,
+    "M_G_corr": 3.21,
+    "dcolour": 0.24,
+    "flip_margin": 2.33,
+    "mass_axis": "非支持",
+    "phot_axis": "光度天井で確認",
+    "label": "BH非支持"
+   },
+   "Bprime": {
+    "r_i": 0.5432953983176645,
+    "r_i_source": "GSP実測",
+    "at_kG_0.84": {
+     "A_G_tge_prime": 0.824124,
+     "A_G_max_prime": 0.824124,
+     "M_G_corr_prime": 2.785876,
+     "dcolour_prime": 0.07905650315685309,
+     "flip_margin": 2.49,
+     "mass_axis": "非支持",
+     "phot_axis": "光度天井で確認",
+     "label": "BH非支持"
+    },
+    "labels_over_scan": [
+     "BH非支持"
+    ],
+    "label_stable_over_scan": true,
+    "flip_margin_range": [
+     2.45,
+     2.53
+    ]
+   }
+  },
+  {
+   "num": 5,
+   "A": {
+    "A_G_gsp": 0.5465,
+    "A_G_tge": 1.1048,
+    "A_G_max": null,
+    "M_G_corr": 2.34,
+    "dcolour": 0.38,
+    "flip_margin": null,
+    "mass_axis": "対象外",
+    "phot_axis": "対象外",
+    "label": "軌道解なし"
+   },
+   "Bprime": {
+    "r_i": 0.541811527904849,
+    "r_i_source": "GSP実測",
+    "at_kG_0.84": {
+     "A_G_tge_prime": 0.928032,
+     "A_G_max_prime": 0.928032,
+     "M_G_corr_prime": 1.9619680000000002,
+     "dcolour_prime": 0.24067377524651812,
+     "flip_margin": null,
+     "mass_axis": "対象外",
+     "phot_axis": "対象外",
+     "label": "軌道解なし"
+    },
+    "labels_over_scan": [
+     "軌道解なし"
+    ],
+    "label_stable_over_scan": true,
+    "flip_margin_range": null
+   }
+  },
+  {
+   "num": 6,
+   "A": {
+    "A_G_gsp": 0.5575,
+    "A_G_tge": 1.4387,
+    "A_G_max": 1.4387,
+    "M_G_corr": 4.79,
+    "dcolour": 0.13,
+    "flip_margin": 3.61,
+    "mass_axis": "支持",
+    "phot_axis": "排除済み",
+    "label": "BH候補"
+   },
+   "Bprime": {
+    "r_i": 0.5460089686098655,
+    "r_i_source": "GSP実測",
+    "at_kG_0.84": {
+     "A_G_tge_prime": 1.2085080000000001,
+     "A_G_max_prime": 1.2085080000000001,
+     "M_G_corr_prime": 4.1414919999999995,
+     "dcolour_prime": -0.12629630663677116,
+     "flip_margin": 3.84,
+     "mass_axis": "支持",
+     "phot_axis": "排除済み",
+     "label": "BH候補"
+    },
+    "labels_over_scan": [
+     "BH候補"
+    ],
+    "label_stable_over_scan": true,
+    "flip_margin_range": [
+     3.78,
+     3.9
+    ]
+   }
+  },
+  {
+   "num": 7,
+   "A": {
+    "A_G_gsp": 0.5238,
+    "A_G_tge": 1.1139,
+    "A_G_max": 1.1139,
+    "M_G_corr": 4.27,
+    "dcolour": 0.23,
+    "flip_margin": 3.38,
+    "mass_axis": "非支持",
+    "phot_axis": "光度天井で確認",
+    "label": "BH非支持"
+   },
+   "Bprime": {
+    "r_i": 0.5408552882779687,
+    "r_i_source": "GSP実測",
+    "at_kG_0.84": {
+     "A_G_tge_prime": 0.9356759999999998,
+     "A_G_max_prime": 0.9356759999999998,
+     "M_G_corr_prime": 3.854324,
+     "dcolour_prime": 0.07003390728522352,
+     "flip_margin": 3.55,
+     "mass_axis": "非支持",
+     "phot_axis": "光度天井で確認",
+     "label": "BH非支持"
+    },
+    "labels_over_scan": [
+     "BH非支持"
+    ],
+    "label_stable_over_scan": true,
+    "flip_margin_range": [
+     3.51,
+     3.6
+    ]
+   }
+  },
+  {
+   "num": 8,
+   "A": {
+    "A_G_gsp": null,
+    "A_G_tge": 1.2589,
+    "A_G_max": 1.2589,
+    "M_G_corr": 6.46,
+    "dcolour": 0.42,
+    "flip_margin": 4.9,
+    "mass_axis": "非支持",
+    "phot_axis": "光度天井で確認",
+    "label": "判定保留"
+   },
+   "Bprime": {
+    "r_i": 0.542,
+    "r_i_source": "中央値代用",
+    "at_kG_0.84": {
+     "A_G_tge_prime": 1.0574759999999999,
+     "A_G_max_prime": 1.0574759999999999,
+     "M_G_corr_prime": 5.402524,
+     "dcolour_prime": 0.050606969538461444,
+     "flip_margin": 5.1,
+     "mass_axis": "非支持",
+     "phot_axis": "光度天井で確認",
+     "label": "BH非支持"
+    },
+    "labels_over_scan": [
+     "BH非支持"
+    ],
+    "label_stable_over_scan": true,
+    "flip_margin_range": [
+     5.05,
+     5.15
+    ]
+   }
+  },
+  {
+   "num": 9,
+   "A": {
+    "A_G_gsp": 0.3036,
+    "A_G_tge": 1.4664,
+    "A_G_max": 1.4664,
+    "M_G_corr": 4.02,
+    "dcolour": 0.12,
+    "flip_margin": 2.55,
+    "mass_axis": "非支持",
+    "phot_axis": "光度天井で確認",
+    "label": "BH非支持"
+   },
+   "Bprime": {
+    "r_i": 0.5405138339920948,
+    "r_i_source": "GSP実測",
+    "at_kG_0.84": {
+     "A_G_tge_prime": 1.231776,
+     "A_G_max_prime": 1.231776,
+     "M_G_corr_prime": 3.0882240000000003,
+     "dcolour_prime": -0.22868089837944666,
+     "flip_margin": 2.79,
+     "mass_axis": "非支持",
+     "phot_axis": "光度天井で確認",
+     "label": "BH非支持"
+    },
+    "labels_over_scan": [
+     "BH非支持"
+    ],
+    "label_stable_over_scan": true,
+    "flip_margin_range": [
+     2.73,
+     2.85
+    ]
+   }
+  },
+  {
+   "num": 10,
+   "A": {
+    "A_G_gsp": null,
+    "A_G_tge": 1.0004,
+    "A_G_max": 1.0004,
+    "M_G_corr": 5.08,
+    "dcolour": 0.19,
+    "flip_margin": 3.78,
+    "mass_axis": "保留",
+    "phot_axis": "対象外",
+    "label": "判定保留"
+   },
+   "Bprime": {
+    "r_i": 0.542,
+    "r_i_source": "中央値代用",
+    "at_kG_0.84": {
+     "A_G_tge_prime": 0.840336,
+     "A_G_max_prime": 0.840336,
+     "M_G_corr_prime": 4.239664,
+     "dcolour_prime": -0.12955251200000006,
+     "flip_margin": 3.94,
+     "mass_axis": "保留",
+     "phot_axis": "対象外",
+     "label": "判定保留"
+    },
+    "labels_over_scan": [
+     "判定保留"
+    ],
+    "label_stable_over_scan": true,
+    "flip_margin_range": [
+     3.9,
+     3.98
+    ]
+   }
+  },
+  {
+   "num": 11,
+   "A": {
+    "A_G_gsp": 0.615,
+    "A_G_tge": 0.9811,
+    "A_G_max": null,
+    "M_G_corr": 4.67,
+    "dcolour": 0.21,
+    "flip_margin": null,
+    "mass_axis": "対象外",
+    "phot_axis": "対象外",
+    "label": "軌道解なし"
+   },
+   "Bprime": {
+    "r_i": 0.5380487804878049,
+    "r_i_source": "GSP実測",
+    "at_kG_0.84": {
+     "A_G_tge_prime": 0.824124,
+     "A_G_max_prime": 0.824124,
+     "M_G_corr_prime": 4.455876,
+     "dcolour_prime": 0.13114578682926814,
+     "flip_margin": null,
+     "mass_axis": "対象外",
+     "phot_axis": "対象外",
+     "label": "軌道解なし"
+    },
+    "labels_over_scan": [
+     "軌道解なし"
+    ],
+    "label_stable_over_scan": true,
+    "flip_margin_range": null
+   }
+  },
+  {
+   "num": 12,
+   "A": {
+    "A_G_gsp": 2.6713,
+    "A_G_tge": 1.4664,
+    "A_G_max": 2.6713,
+    "M_G_corr": 5.74,
+    "dcolour": -0.32,
+    "flip_margin": 5.44,
+    "mass_axis": "保留",
+    "phot_axis": "対象外",
+    "label": "判定保留"
+   },
+   "Bprime": {
+    "r_i": 0.562834574926066,
+    "r_i_source": "GSP実測",
+    "at_kG_0.84": {
+     "A_G_tge_prime": 1.231776,
+     "A_G_max_prime": 2.6713,
+     "M_G_corr_prime": 5.7387,
+     "dcolour_prime": 0.1910089643501558,
+     "flip_margin": 5.44,
+     "mass_axis": "保留",
+     "phot_axis": "対象外",
+     "label": "判定保留"
+    },
+    "labels_over_scan": [
+     "判定保留"
+    ],
+    "label_stable_over_scan": true,
+    "flip_margin_range": [
+     5.44,
+     5.44
+    ]
+   }
+  },
+  {
+   "num": 13,
+   "A": {
+    "A_G_gsp": 0.5131,
+    "A_G_tge": 0.929,
+    "A_G_max": 0.929,
+    "M_G_corr": 0.18,
+    "dcolour": 1.01,
+    "flip_margin": -0.54,
+    "mass_axis": "非支持",
+    "phot_axis": "光度天井が不足",
+    "label": "判定保留"
+   },
+   "Bprime": {
+    "r_i": 0.5308906645877997,
+    "r_i_source": "GSP実測",
+    "at_kG_0.84": {
+     "A_G_tge_prime": 0.78036,
+     "A_G_max_prime": 0.78036,
+     "M_G_corr_prime": -0.0903600000000001,
+     "dcolour_prime": 0.8684466609822648,
+     "flip_margin": -0.39,
+     "mass_axis": "非支持",
+     "phot_axis": "光度天井が不足",
+     "label": "判定保留"
+    },
+    "labels_over_scan": [
+     "判定保留"
+    ],
+    "label_stable_over_scan": true,
+    "flip_margin_range": [
+     -0.43,
+     -0.35
+    ]
+   }
+  }
+ ],
+ "track_8_critical_A": 0.35197500000000026
+}
