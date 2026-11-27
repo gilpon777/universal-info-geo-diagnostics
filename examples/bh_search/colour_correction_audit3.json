@@ -1,0 +1,737 @@
+{
+ "meta": {
+  "variants": "G=GSPのみ, T=TGE変換値のみ, M=現行B'(天井max+色TGE)",
+  "k_G_range": [
+   0.8,
+   0.88
+  ],
+  "note": "r の代用幅は実測10件の最小・最大であり統計的な信頼区間ではない"
+ },
+ "objects": [
+  {
+   "num": 1,
+   "r_i_source": "中央値代用",
+   "variants_at_0.84": {
+    "G": "構成不可（GSP欠落）",
+    "T": {
+     "agmax": 0.9356759999999998,
+     "M_G_corr": 6.004324,
+     "dcolour": 0.08251766800000016,
+     "flip_margin": null,
+     "label": "軌道解なし"
+    },
+    "M": {
+     "agmax": 0.9356759999999998,
+     "M_G_corr": 6.004324,
+     "dcolour": 0.08251766800000016,
+     "flip_margin": null,
+     "label": "軌道解なし"
+    }
+   },
+   "stability": {
+    "T": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "軌道解なし": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    },
+    "M": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "軌道解なし": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    }
+   }
+  },
+  {
+   "num": 2,
+   "r_i_source": "GSP実測",
+   "variants_at_0.84": {
+    "G": {
+     "agmax": 0.207,
+     "M_G_corr": 5.96,
+     "dcolour": 0.05,
+     "flip_margin": null,
+     "label": "軌道解なし"
+    },
+    "T": {
+     "agmax": 0.879312,
+     "M_G_corr": 5.290688,
+     "dcolour": -0.18208575797101456,
+     "flip_margin": null,
+     "label": "軌道解なし"
+    },
+    "M": {
+     "agmax": 0.879312,
+     "M_G_corr": 5.290688,
+     "dcolour": -0.18208575797101456,
+     "flip_margin": null,
+     "label": "軌道解なし"
+    }
+   },
+   "stability": {
+    "T": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "軌道解なし": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    },
+    "M": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "軌道解なし": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    }
+   }
+  },
+  {
+   "num": 3,
+   "r_i_source": "GSP実測",
+   "variants_at_0.84": {
+    "G": {
+     "agmax": 0.5942,
+     "M_G_corr": 5.51,
+     "dcolour": 0.03,
+     "flip_margin": null,
+     "label": "軌道解なし"
+    },
+    "T": {
+     "agmax": 0.891072,
+     "M_G_corr": 5.208927999999999,
+     "dcolour": -0.07349307704476593,
+     "flip_margin": null,
+     "label": "軌道解なし"
+    },
+    "M": {
+     "agmax": 0.891072,
+     "M_G_corr": 5.208927999999999,
+     "dcolour": -0.07349307704476593,
+     "flip_margin": null,
+     "label": "軌道解なし"
+    }
+   },
+   "stability": {
+    "T": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "軌道解なし": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    },
+    "M": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "軌道解なし": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    }
+   }
+  },
+  {
+   "num": 4,
+   "r_i_source": "GSP実測",
+   "variants_at_0.84": {
+    "G": {
+     "agmax": 0.4042,
+     "M_G_corr": 3.21,
+     "dcolour": 0.24,
+     "flip_margin": 2.91,
+     "label": "BH非支持"
+    },
+    "T": {
+     "agmax": 0.824124,
+     "M_G_corr": 2.785876,
+     "dcolour": 0.07905650315685309,
+     "flip_margin": 2.49,
+     "label": "BH非支持"
+    },
+    "M": {
+     "agmax": 0.824124,
+     "M_G_corr": 2.785876,
+     "dcolour": 0.07905650315685309,
+     "flip_margin": 2.49,
+     "label": "BH非支持"
+    }
+   },
+   "stability": {
+    "T": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "BH非支持": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    },
+    "M": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "BH非支持": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    }
+   }
+  },
+  {
+   "num": 5,
+   "r_i_source": "GSP実測",
+   "variants_at_0.84": {
+    "G": {
+     "agmax": 0.5465,
+     "M_G_corr": 2.34,
+     "dcolour": 0.38,
+     "flip_margin": null,
+     "label": "軌道解なし"
+    },
+    "T": {
+     "agmax": 0.928032,
+     "M_G_corr": 1.9619680000000002,
+     "dcolour": 0.24067377524651812,
+     "flip_margin": null,
+     "label": "軌道解なし"
+    },
+    "M": {
+     "agmax": 0.928032,
+     "M_G_corr": 1.9619680000000002,
+     "dcolour": 0.24067377524651812,
+     "flip_margin": null,
+     "label": "軌道解なし"
+    }
+   },
+   "stability": {
+    "T": {
+     "n_subintervals": 2,
+     "critical_kG": [
+      0.8,
+      0.80558,
+      0.88
+     ],
+     "labels_seen": {
+      "軌道解なし": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    },
+    "M": {
+     "n_subintervals": 2,
+     "critical_kG": [
+      0.8,
+      0.80558,
+      0.88
+     ],
+     "labels_seen": {
+      "軌道解なし": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    }
+   }
+  },
+  {
+   "num": 6,
+   "r_i_source": "GSP実測",
+   "variants_at_0.84": {
+    "G": {
+     "agmax": 0.5575,
+     "M_G_corr": 4.79,
+     "dcolour": 0.13,
+     "flip_margin": 4.49,
+     "label": "BH候補"
+    },
+    "T": {
+     "agmax": 1.2085080000000001,
+     "M_G_corr": 4.1414919999999995,
+     "dcolour": -0.12629630663677116,
+     "flip_margin": 3.84,
+     "label": "BH候補"
+    },
+    "M": {
+     "agmax": 1.2085080000000001,
+     "M_G_corr": 4.1414919999999995,
+     "dcolour": -0.12629630663677116,
+     "flip_margin": 3.84,
+     "label": "BH候補"
+    }
+   },
+   "stability": {
+    "T": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "BH候補": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    },
+    "M": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "BH候補": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    }
+   }
+  },
+  {
+   "num": 7,
+   "r_i_source": "GSP実測",
+   "variants_at_0.84": {
+    "G": {
+     "agmax": 0.5238,
+     "M_G_corr": 4.27,
+     "dcolour": 0.23,
+     "flip_margin": 3.97,
+     "label": "BH非支持"
+    },
+    "T": {
+     "agmax": 0.9356759999999998,
+     "M_G_corr": 3.854324,
+     "dcolour": 0.07003390728522352,
+     "flip_margin": 3.55,
+     "label": "BH非支持"
+    },
+    "M": {
+     "agmax": 0.9356759999999998,
+     "M_G_corr": 3.854324,
+     "dcolour": 0.07003390728522352,
+     "flip_margin": 3.55,
+     "label": "BH非支持"
+    }
+   },
+   "stability": {
+    "T": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "BH非支持": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    },
+    "M": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "BH非支持": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    }
+   }
+  },
+  {
+   "num": 8,
+   "r_i_source": "中央値代用",
+   "variants_at_0.84": {
+    "G": "構成不可（GSP欠落）",
+    "T": {
+     "agmax": 1.0574759999999999,
+     "M_G_corr": 5.402524,
+     "dcolour": 0.050606969538461444,
+     "flip_margin": 5.1,
+     "label": "BH非支持"
+    },
+    "M": {
+     "agmax": 1.0574759999999999,
+     "M_G_corr": 5.402524,
+     "dcolour": 0.050606969538461444,
+     "flip_margin": 5.1,
+     "label": "BH非支持"
+    }
+   },
+   "stability": {
+    "T": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "BH非支持": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    },
+    "M": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "BH非支持": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    }
+   }
+  },
+  {
+   "num": 9,
+   "r_i_source": "GSP実測",
+   "variants_at_0.84": {
+    "G": {
+     "agmax": 0.3036,
+     "M_G_corr": 4.02,
+     "dcolour": 0.12,
+     "flip_margin": 3.72,
+     "label": "BH非支持"
+    },
+    "T": {
+     "agmax": 1.231776,
+     "M_G_corr": 3.0882240000000003,
+     "dcolour": -0.22868089837944666,
+     "flip_margin": 2.79,
+     "label": "BH非支持"
+    },
+    "M": {
+     "agmax": 1.231776,
+     "M_G_corr": 3.0882240000000003,
+     "dcolour": -0.22868089837944666,
+     "flip_margin": 2.79,
+     "label": "BH非支持"
+    }
+   },
+   "stability": {
+    "T": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "BH非支持": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    },
+    "M": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "BH非支持": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    }
+   }
+  },
+  {
+   "num": 10,
+   "r_i_source": "中央値代用",
+   "variants_at_0.84": {
+    "G": "構成不可（GSP欠落）",
+    "T": {
+     "agmax": 0.840336,
+     "M_G_corr": 4.239664,
+     "dcolour": -0.12955251200000006,
+     "flip_margin": 3.94,
+     "label": "判定保留"
+    },
+    "M": {
+     "agmax": 0.840336,
+     "M_G_corr": 4.239664,
+     "dcolour": -0.12955251200000006,
+     "flip_margin": 3.94,
+     "label": "判定保留"
+    }
+   },
+   "stability": {
+    "T": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "判定保留": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    },
+    "M": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "判定保留": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    }
+   }
+  },
+  {
+   "num": 11,
+   "r_i_source": "GSP実測",
+   "variants_at_0.84": {
+    "G": {
+     "agmax": 0.615,
+     "M_G_corr": 4.67,
+     "dcolour": 0.21,
+     "flip_margin": null,
+     "label": "軌道解なし"
+    },
+    "T": {
+     "agmax": 0.824124,
+     "M_G_corr": 4.455876,
+     "dcolour": 0.13114578682926814,
+     "flip_margin": null,
+     "label": "軌道解なし"
+    },
+    "M": {
+     "agmax": 0.824124,
+     "M_G_corr": 4.455876,
+     "dcolour": 0.13114578682926814,
+     "flip_margin": null,
+     "label": "軌道解なし"
+    }
+   },
+   "stability": {
+    "T": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "軌道解なし": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    },
+    "M": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "軌道解なし": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    }
+   }
+  },
+  {
+   "num": 12,
+   "r_i_source": "GSP実測",
+   "variants_at_0.84": {
+    "G": {
+     "agmax": 2.6713,
+     "M_G_corr": 5.74,
+     "dcolour": -0.32,
+     "flip_margin": 5.44,
+     "label": "判定保留"
+    },
+    "T": {
+     "agmax": 1.231776,
+     "M_G_corr": 7.178224,
+     "dcolour": 0.1910089643501558,
+     "flip_margin": 6.88,
+     "label": "判定保留"
+    },
+    "M": {
+     "agmax": 2.6713,
+     "M_G_corr": 5.7387,
+     "dcolour": 0.1910089643501558,
+     "flip_margin": 5.44,
+     "label": "判定保留"
+    }
+   },
+   "stability": {
+    "T": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "判定保留": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    },
+    "M": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "判定保留": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    }
+   }
+  },
+  {
+   "num": 13,
+   "r_i_source": "GSP実測",
+   "variants_at_0.84": {
+    "G": {
+     "agmax": 0.5131,
+     "M_G_corr": 0.18,
+     "dcolour": 1.01,
+     "flip_margin": -0.12,
+     "label": "判定保留"
+    },
+    "T": {
+     "agmax": 0.78036,
+     "M_G_corr": -0.0903600000000001,
+     "dcolour": 0.8684466609822648,
+     "flip_margin": -0.39,
+     "label": "判定保留"
+    },
+    "M": {
+     "agmax": 0.78036,
+     "M_G_corr": -0.0903600000000001,
+     "dcolour": 0.8684466609822648,
+     "flip_margin": -0.39,
+     "label": "判定保留"
+    }
+   },
+   "stability": {
+    "T": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "判定保留": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    },
+    "M": {
+     "n_subintervals": 1,
+     "critical_kG": [
+      0.8,
+      0.88
+     ],
+     "labels_seen": {
+      "判定保留": [
+       0.8,
+       0.88
+      ]
+     },
+     "stable": true
+    }
+   }
+  }
+ ]
+}
